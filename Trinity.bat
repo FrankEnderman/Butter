@@ -333,8 +333,7 @@ echo do you want to let this program to change your kernel?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
-:songs
-start iexplore "https://www.youtube.com/watch?v=-345VbbYTN8"
+
 :ctrlPanel
 cls
 timeout /T 1 /NOBREAK >nul
