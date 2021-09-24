@@ -220,39 +220,23 @@ set /p input=
 if %input% == 1 goto menu
 
 :calc
-title Calculator- Butter Trinity OS
+title Calculator- butter OS
 cls
-echo v2.0
-set /p first="Enter first number: "
-set /p second="Enter second number: "
-set /p opt="1-+ 2-- 3-* 4-/: "
-if %opt%==1 goto Plus
-if %opt%==2 goto Minus
-if %opt%==3 goto Multi
-if %opt%==4 goto Div
-echo Error
-
-
-set /a fin=%first%+%second%
-echo Sum is %fin%
+color 0a
+title CALCULATOR- butter OS
+ECHO Calculator Version 1.2
+ECHO * = MULTIPLY
+ECHO + = ADD
+ECHO _ = SUBTRACT
+ECHO / = DIVIDE
+echo % = boolean/remainder
+SET /p UDefine= 
+SET /a UDefine=%UDefine%
+ECHO =
+ECHO %UDefine%
+ECHO.
 pause
 goto menu
-
-:Minus
-set /a fin=%first%-%second%
-echo Minus is %fin%
-goto calc
-
-:Multi
-set /a fin=%first%*%second%
-echo Multiple is %fin%
-goto calc
-
-:Div
-set /a fin=%first%/%second%
-echo Divide is %fin%
-goto calc
-
 :TEXT
 cls
 echo TEXT EDITOR 1.1
