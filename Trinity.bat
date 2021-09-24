@@ -338,13 +338,30 @@ if %FD% == 2 goto menu
 cls
 timeout /T 1 /NOBREAK >nul
 echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
-echo 5.show nuclear show :D
+echo 5.show nuclear show :D 6.NUKE
 set /p DFF= select:
 if %DFF% == 1 goto powerOptions
 if %DFF% == 2 goto menu2
 if %DFF% == 3 goto menu
 if %DFF% == 4 goto brokenMode
 if %DFF% == 5 goto nuclearIcon
+if %DFF% == 6 goto nuke
+:nuke
+cls
+echo 1.NUCLEAR ANNIHILATION 2.surrender
+set IO= press:
+if %IO% == 1 annihilated
+if %IO% == 2 surrender
+:annihilated
+cls 
+echo you kinda lost (deaths: %random%%random%%random%)
+pause
+goto menu
+:surrender
+cls
+echo at least you survived
+pause
+goto menu
 :nuclearIcon
 cls
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
