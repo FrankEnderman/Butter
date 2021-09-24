@@ -94,7 +94,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.controls 8.songs 9.Spinning Rage
-echo 6.browser menu 5.help 10.folder creator 11.list disks 12.songs and stuff 14.Drive rec
+echo 6.browser menu 5.release notes 10.folder creator 11.list disks 12.songs and stuff 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% 
 
@@ -104,7 +104,7 @@ if %input% == 1 goto info
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto randomColor
-if %input% == 5 goto help
+if %input% == 5 goto releaseNotes
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
 if %imput% == 8 goto songs
@@ -337,11 +337,12 @@ if %SD% == 3 goto menu
 
 
 :menu2
-echo 1.calc 2.text editor 3.ASCII paintings
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto ASCIIPaintings
+if %OPTI% == 4 goto help
 :UAC
 cls
 echo do you want to let this program to change your kernel?
@@ -545,4 +546,13 @@ echo                 ,yz~              `jz0A@RBHBRMXXOAggqei,                   
 echo                                        `,\jlzxnn$UgAWBHMACc^                                         'lAMHOc`                                                
 echo                                                      |zpXBHB0\                                          ,pDH@n_  
 pause
-goto menu                                            
+goto menu         
+:releaseNotes
+cls
+echo =========================
+echo Butter Trinity 5 SP1    
+echo =========================
+echo 1.fixed grammar
+echo 2.made the browser useful
+pause
+goto menu2                               
