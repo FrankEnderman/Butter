@@ -1,5 +1,4 @@
  @echo off
-set EMOTE == ":D"
 color 7
 title Butter Trinity v5 SP 2 Winter Edition
 
