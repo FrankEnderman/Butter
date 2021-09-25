@@ -97,8 +97,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 7.controls 8.songs 9.Spinning Rage
-echo 6.browser menu 5.release notes 10.folder creator 11.list disks 12.songs and stuff 14.Drive rec
-echo 15.randomness
+echo 6.browser menu 5.release notes 
 ECHO current time: %time% date: %date% name: %name% 
 
 
@@ -254,8 +253,9 @@ cls
 echo Text editor is a program made for creating text documents
 echo Calculator lets you process math problems
 echo BrokenMode is for breaking your computer (DANGEROUS)
-
 pause
+
+
 goto menu
 :DRVList
 set DVDList= wmic logicaldisk get caption,volumename
@@ -468,18 +468,7 @@ CRASH_HANDLER
 echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
 timeout /T 2 /NOBREAK >nul
 goto boot
-:creds
-cls
-echo ======================
-timeout /T 1 /NOBREAK >nul
-echo       Credits      
-timeout /T 1 /NOBREAK >nul
-echo ======================
-timeout /T 1 /NOBREAK >nul
-echo  Based on: Purnjay OS
-timeout /T 1 /NOBREAK >nul
-echo made by: me, Purnjay P
-timeout /T 1 /NOBREAK >nul
+
 :ASCIIPaintings
 cls                                                                                                                                    `?g@q!               ,lA
 timeout /T 1 /NOBREAK >nul
