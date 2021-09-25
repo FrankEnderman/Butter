@@ -1,7 +1,7 @@
  @echo off
  
 color 0a
-title BUTTER v0.7.5
+title BUTTER JPNS vLAST
 goto boot
 :boot
 cls
@@ -32,6 +32,7 @@ pause
 
 :menu
 cls
+echo WARNING: please update to Trinity for better security because JPNS is getting deprecated
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.spinning rage 7.power options 8.GUI interface 9.productivity
@@ -60,6 +61,7 @@ cls
 echo.========================
 echo     BUTTER OS
 echo.========================
+timeout /T 1 /NOBREAK >nul
 echo     DETAILS  
 echo.
 echo     VERSION = 0.7.5
