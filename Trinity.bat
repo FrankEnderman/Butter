@@ -97,7 +97,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 7.controls 8.songs 9.Spinning Rage
-echo 6.browser menu 5.release notes 
+echo 6.browser menu 5.TimeSetter
 ECHO current time: %time% date: %date% name: %name% 
 
 
@@ -106,7 +106,7 @@ if %input% == 1 goto info
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto randomColor
-if %input% == 5 goto releaseNotes
+if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
 if %imput% == 8 goto songs
@@ -118,6 +118,11 @@ if %input% == 11 goto DriveDisplay
 if %input% == 12 start "C:\Users\drraj\Notepad++\msgbox.vbs" "C:\users\%username%\desktop\warning.vbs"
 if %input% == 14 goto DRVRecovery
 if %input% == 15 goto random
+:timeSetter
+cls
+echo enter the time
+set J= NewTime:
+set time= %J%
 :randomColor
 cls
 color 0a
