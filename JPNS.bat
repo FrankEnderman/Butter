@@ -29,9 +29,6 @@ echo Hello! %name% it is %time% now.
 echo.
 pause
 
-function CLCK (
-	 ECHO %time%
-)
 
 :menu
 cls
@@ -55,11 +52,7 @@ if %imput% == 8 goto GUIInterface
 if %input% == 9 goto productivity
 if %input% == "A" 
 if %input% == 6 goto GMenu
-if %input% == 10 goto FolderCreator
-if %input% == 11 goto DriveDisplay
-if %input% == 12 start "C:\Users\drraj\Notepad++\msgbox.vbs" "C:\users\%username%\desktop\warning.vbs"
-if %input% == 14 goto DRVRecovery
-if %input% == 15 goto random
+
 
 :info
 
@@ -102,7 +95,7 @@ echo  2. Menu
 
 set /p check= 
 
-if %check% == 1 goto update
+
 
 if %check% == 2 goto menu
 
@@ -134,29 +127,7 @@ echo enter 1 to return to menu
 set /p input=
 if %input% == 1 goto menu
 :GMenu
-cls
-echo Games List
-echo 1. spinning rage
-
-echo 2. command and conquer
-
-echo press 3 to return to the menu screen.
-set /p input=
-if %input% == 1 goto spinningRage
-if %input% == 2 start generals
-if %input% == 3 goto menu
-:calc
-title Calculator- butter OS
-cls
-color 0a
-title CALCULATOR- butter OS
-ECHO Calculator Version 1.2
-ECHO * = MULTIPLY
-ECHO + = ADD
-ECHO _ = SUBTRACT
-ECHO / = DIVIDE
-SET /p UDefine= 
-SET /a UDefine=%UDefine%
+fine=%UDefine%
 ECHO =
 ECHO %UDefine%
 ECHO.
