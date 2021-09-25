@@ -1,7 +1,7 @@
  @echo off
 set EMOTE == ":D"
-color 0a
-title Butter Trinity v5 SP 1
+color 0
+title Butter Trinity v5 SP 2 Winter Edition
 
 goto boot
 :boot
@@ -96,7 +96,7 @@ cls
 
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change the text color 7.controls 8.songs 9.Spinning Rage
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 7.controls 8.songs 9.Spinning Rage
 echo 6.browser menu 5.release notes 10.folder creator 11.list disks 12.songs and stuff 14.Drive rec
 echo 15.randomness
 ECHO current time: %time% date: %date% name: %name% 
@@ -121,7 +121,7 @@ if %input% == 14 goto DRVRecovery
 if %input% == 15 goto random
 :randomColor
 cls
-color 0c
+color 0a
 pause 
 goto menu
 :info
@@ -225,7 +225,6 @@ if %input% == 1 goto menu
 :calc
 title Calculator- butter OS
 cls
-color 0a
 title CALCULATOR- butter OS
 ECHO Calculator Version 1.2
 ECHO * = MULTIPLY
@@ -258,9 +257,9 @@ echo BrokenMode is for breaking your computer (DANGEROUS)
 
 pause
 goto menu
+:DRVList
+set DVDList= wmic logicaldisk get caption,volumename
 
-var DVDList == wmic logicaldisk get caption,volumename
-cls
 echo drives: %DVDList% 
 echo press 1 to return to menu
 set /p input=
@@ -324,12 +323,21 @@ if %SD% == 3 goto menu
 
 
 :menu2
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto ASCIIPaintings
 if %OPTI% == 4 goto help
+if %OPTI% == 5 goto DVDList
+if %OPTI% == 6 goto winterGift
+:winterGift
+cls
+echo here is the changes:
+echo 1.changed the text color
+echo 2.made some cool changes
+pause
+goto menu2
 :UAC
 cls
 echo do you want to let this program to change your kernel?
