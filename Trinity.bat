@@ -1,6 +1,6 @@
  @echo off
 set EMOTE == ":D"
-color 0
+color 7
 title Butter Trinity v5 SP 2 Winter Edition
 
 goto boot
@@ -560,4 +560,5 @@ echo =========================
 echo 1.fixed grammar
 echo 2.made the browser useful
 pause
-goto menu2                               
+goto menu2 
+:                              
