@@ -339,7 +339,6 @@ if %FD% == 2 goto menu
 
 :ctrlPanel
 cls
-timeout /T 1 /NOBREAK >nul
 echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
 echo 5.show nuclear show :D 6.NUKE
 set /p DFF= select:
