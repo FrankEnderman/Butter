@@ -111,13 +111,7 @@ if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
 if %imput% == 8 goto songs
 if %input% == 9 goto spinningRage
-if %input% == "A" 
-if %input% == 6 goto GMenu
-if %input% == 10 goto FolderCreator
-if %input% == 11 goto DriveDisplay
-if %input% == 12 start "C:\Users\drraj\Notepad++\msgbox.vbs" "C:\users\%username%\desktop\warning.vbs"
-if %input% == 14 goto DRVRecovery
-if %input% == 15 goto random
+
 :timeSetter
 cls
 echo enter the time
@@ -328,7 +322,7 @@ if %SD% == 3 goto menu
 
 
 :menu2
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
@@ -336,6 +330,7 @@ if %OPTI% == 3 goto ASCIIPaintings
 if %OPTI% == 4 goto help
 if %OPTI% == 5 goto DVDList
 if %OPTI% == 6 goto winterGift
+if %OPTI% == 7 goto story
 :winterGift
 cls
 echo here is the changes:
@@ -561,4 +556,14 @@ echo 1.fixed grammar
 echo 2.made the browser useful
 pause
 goto menu2 
-:                              
+:story
+cls
+echo The Butter Invasion
+echo Butter and King met in a noodle shop.
+echo Then King said to butter that pirates will invade their town.
+echo butter was thriled to destroy them
+echo then they went to a secret armory to arm up.
+echo they went to the port then they went on a ship.
+echo after they killed the pirate crew, they fought with the pirate captain.
+echo then the pirate captain attacked King. just before it hit, Butter jumped in, taking massive damage.
+echo after winning the battle, King died from a disease.                              
