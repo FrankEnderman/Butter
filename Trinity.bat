@@ -95,8 +95,9 @@ cls
 
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 7.controls 8.songs 9.Spinning Rage
-echo 6.browser menu 5.TimeSetter
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
+echo 8.songs 9.Spinning Rage
+
 ECHO current time: %time% date: %date% name: %name% 
 
 
