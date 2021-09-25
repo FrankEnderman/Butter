@@ -1,6 +1,6 @@
  @echo off
 color 7
-title Butter Trinity v5 SP 2 Winter Edition
+title Butter Trinity v5 SP 3 Winter Edition
 
 goto boot
 :boot
@@ -135,7 +135,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 5 SP 1
+echo     VERSION = 5 SP 3
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -468,102 +468,3 @@ CRASH_HANDLER
 echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
 timeout /T 2 /NOBREAK >nul
 goto boot
-
-:ASCIIPaintings
-cls                                                                                                                                    `?g@q!               ,lA
-timeout /T 1 /NOBREAK >nul
-echo                                                                                                                                    \IXX]\    _nGT`      !8@Al
-echo                                                                                                                                 `+g@g+`   `1PRHWu`   \2OXn>  
-echo                                                                                                                              \lIXXI\    >IXHMU}`  `?pWg?`  
-timeout /T 1 /NOBREAK >nul  
-echo                                                                            \Zg^                                           ,]AWPpt`   `}bRHXC`   _IXX]\       
-echo                                                                            `l2,                                        _2A@qt,     ,2XHBX2`  `vg@q+`         
-echo                                                                                                                    ,vqWPI>       +UBBOl`   !A@q+`
-timeout /T 1 /NOBREAK >nul            
-echo                                                                                                                 _2gWA2_       \xmBBPc`  \]OXl,               
-echo                                                                                                              >]PWp1,         `PH&n"  \vpWgt`                 
-echo                                                                                                          `+8XXb?`             '!`  !pWP]\
-timeout /T 1 /NOBREAK >nul                    
-echo                                                                                                       `!IWOI!`                  ,lOXn\                       
-echo                   ,:                                                                              `t8XOn_                    >n@Al`                         
-echo                   ~&D>                                                                          ,vqWP]>   \uPGl      "aj   `1g@8!   
-timeout /T 1 /NOBREAK >nul                         
-echo                                                                                             `+8OO8+`    iXHHma~   `+UBHA`_nXp+`                              
-echo                                                                                          ,vqWPu>      ,0BBb+`    tGHBX]cg@q\                                 
-echo                                                                                       `?gWA2_        !PHH?     ^UBHWnfXX]\   
-timeout /T 1 /NOBREAK >nul                                
-echo                                                                                    ,vpWPl\         `SBBPc      ~0pqZ@g?`                                     
-echo                                                                                 _2AWg2_           }mHD2        `lPWn_                                        
-echo                                                                              >]PWqv,             xBHA>       >nWAl` 
-timeout /T 1 /NOBREAK >nul                                         
-echo                                                                          `+nOX8?`              `yBHd`     `vg@8!                                             
-echo                                                                       `?bXOI!`              "epWHHA`    `IXX2\                                               
-echo                                                                    \2gWqt,              ,20MHMgf},   `?g@I\     
-timeout /T 1 /NOBREAK >nul                                             
-echo                                                                 _]AWp1`          `~|`  }XHBPz-     \IXXy\                                                    
-echo          ^`                                                  >]PWq?,        `~__>>, `lGBMb"     `+hWg+`                                v&q                   
-echo         cBA                                              `!IOX8?`       `~___~`   ~u&HD$'     \2XXI\                                   ,i"                   
-echo          ^,                                           `+8XOn+`        ~!_`     `iqBH&u\     !q@g1` 
-timeout /T 1 /NOBREAK >nul                                                          
-echo                                                     >qXOI>      ^_____`    `!aAMHRPC'    ,lO&n_                                                              
-echo                                                  >IOX]_      '__,       |zh&HBm81:     \8@Al`                                                                
-echo                                              ,vpWA2\                |2PQHDAu+`      \2OXl,                                                                   
-echo                                           ,vpWA2\               `+wXBBGCt,        !q@g1`      
-timeout /T 1 /NOBREAK >nul                                                               
-echo                                        ,1pWA2\               '}yOHBP3>         \2OXn_    
-                                                                 
-echo                                     `?q@P2\       `,,,,\+lnUXBHRWGc         `+pWgv`                                     `^                                   
-echo                                   \8XO]_  '>     2MRRRRBHB@Pq2+,          _IXXI\                                        0B2                                  
-echo                                `1gWn>    -}`     \cllllc}~`            ,lA@q+`                                          `_` 
-timeout /T 1 /NOBREAK >nul                                    
-echo                              >nWPz\    ,__`              ``          _q@Al,                                                                                  
-echo                           `?g@8!    `~_>       `,|1lzTgAXDDA`     \2A@I_                                                                                     
-echo               `^        \n@g+`      ,    `>vnPMHHHRXXP$nn7!\   >uOXn>                                                                                        
-echo               0B2     `2MAlvy]2+,     |AX@HHDGbc+!\         >IOX8+`
-timeout /T 1 /NOBREAK >nul                                                                                             
-echo               `_`    ,gRXXXpI]ngWAt   -]nn5+,           `+nOX8+`                                                                                             
-echo                      pBM@v`     ,nR+                 _lqWPI!`                                                                                                
-echo                     ,WHHl         qA             ,?nPWql_                                                                                                    
-echo                      AHH2         pA       `>vIpOOg]+` 
-timeout /T 1 /NOBREAK >nul                                                                                                         
-echo                      >@HRI\     >pR2ttznqAOPPpIv_                                                                                                            
-echo MRRRR@XXXOAggggggggpIv+OHHRX@@MWPAqby]1+_,                                                                                                                   
-echo clllxnnnmHHHHHHXggP&BHMAAgq8Z8x+^                                                                                                                            
-echo         "nnnS&H@!   !nAXXXXX@RBHBWXXXXXPCv+!'`  
-timeout /T 1 /NOBREAK >nul                                                                                                                
-echo              }RHg`           ,^?nCnnCC$XBHHHB&Zat,                                              \Zg^                                                         
-echo               0HB1                      ^!!saAWBHDXXXXXXXmApy1_,                                `l2,                                                         
-echo               |@Hm                             _znnnnnnnn$P@RHBR@Pbei'                                                                                       
-echo                SHB,        !!`                             `:+le$P&BHRXACuv_ 
-timeout /T 1 /NOBREAK >nul                                                                                   
-echo                |MHz       ~mW>                                     ^rx0m&RHBmgZbuz1_                                                                         
-echo                 kHA                                                       \vnn0PXXRHR@OgCu7|`                                                                
-echo                 eH@\ '1llllll1>`                                                  ^czn0PXMHHDmh]|                                                            
-echo                 zHRAmDHBRRRRRHH@mA$l_`                                                   `"ra0XHBOql' 
-timeout /T 1 /NOBREAK >nul                                                          
-echo                 lHHBPn7',,,,,"an0GMHB@Pq2li',`                                                `+fg@HRGn\                                                     
-echo                 ,yz~              `jz0A@RBHBRMXXOAggqei,                                          `}nMHQgt`                                                  
-echo                                        `,\jlzxnn$UgAWBHMACc^                                         'lAMHOc`                                                
-echo                                                      |zpXBHB0\                                          ,pDH@n_  
-pause
-goto menu         
-:releaseNotes
-cls
-echo =========================
-echo Butter Trinity 5 SP1    
-echo =========================
-echo 1.fixed grammar
-echo 2.made the browser useful
-pause
-goto menu2 
-:story
-cls
-echo The Butter Invasion
-echo Butter and King met in a noodle shop.
-echo Then King said to butter that pirates will invade their town.
-echo butter was thriled to destroy them
-echo then they went to a secret armory to arm up.
-echo they went to the port then they went on a ship.
-echo after they killed the pirate crew, they fought with the pirate captain.
-echo then the pirate captain attacked King. just before it hit, Butter jumped in, taking massive damage.
-echo after winning the battle, King died from a disease.                              
