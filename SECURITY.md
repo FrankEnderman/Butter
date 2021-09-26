@@ -27,6 +27,7 @@
 | 5       | ✅                 | 12-04-2022      |
 | 6       | ✅                 | 15-04-2022      |
 | W1.0    | ✅                 | 15-04-2022      |
+| W1.1-W1.7 | ✅               | 18-04-2022      |
 
 ## Reporting a Vulnerability
 email me at buttertheidiot@gmail.com to report a vulnerability. also pls specify a version
