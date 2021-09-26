@@ -1,13 +1,12 @@
  @echo off
 color 7
 title Butter Trinity v5 SP 3 Winter Edition
-
+echo BootSuccessful.%random%.%time%(%date%) > Boot%time%%date%.%random%
 goto boot
 :DIR
 set GF= dir C:\users\%username%\desktop
 echo %GF%
 :boot
-
 cls
 echo Winter!!!!!!!!!!
 timeout /T 1 /NOBREAK >nul
