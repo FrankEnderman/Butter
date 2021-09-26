@@ -116,9 +116,6 @@ cls
 echo Hello! %name% it is %time% now.
 echo.
 pause
-
-
-
 :menu
 cls
 echo What Would You Like To Do? Type the number.
@@ -202,38 +199,6 @@ echo  time: %time%
 timeout /T 1 /NOBREAK >nul
 echo.
 echo  date: %date%
-echo.
-timeout /T 1 /NOBREAK >nul
-echo Wanna check for update?
-timeout /T 1 /NOBREAK >nul
-
-echo  1. to check for update 
-timeout /T 1 /NOBREAK >nul
-echo  2. Menu
-timeout /T 1 /NOBREAK >nul
-
-set /p check= 
-
-if %check% == 1 goto update
-
-if %check% == 2 goto menu
-
-
-
-
-     
-:update 
-cls
-
-echo Checking for new version /Update.............
-timeout /T 5 /NOBREAK >nul
-echo.
-pause
-cls
-
-echo.
-echo 1 update found! %random%%random%%random%%random%%random%%random%%random%.SFG pack available
-echo.
 pause
 goto menu
 :clock 
