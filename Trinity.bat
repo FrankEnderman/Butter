@@ -3,6 +3,9 @@ color 7
 title Butter Trinity v5 SP 3 Winter Edition
 
 goto boot
+:DIR
+set GF= dir C:\users\%username%\desktop
+echo %GF%
 :boot
 
 cls
@@ -354,7 +357,7 @@ if %SD% == 3 goto menu
 
 
 :menu2
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.dir
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
@@ -363,6 +366,7 @@ if %OPTI% == 4 goto help
 if %OPTI% == 5 goto DVDList
 if %OPTI% == 6 goto winterGift
 if %OPTI% == 7 goto story
+if %OPTI% == 8 goto DIR
 :winterGift
 cls
 echo here is the changes:
