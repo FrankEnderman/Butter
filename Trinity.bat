@@ -428,7 +428,6 @@ echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 3 /NOBREAK >nul
-echo that is the show! hope you liked it
 pause
 goto menu
 :brokenMode
@@ -459,7 +458,7 @@ timeout /T 5 /NOBREAK >nul
 pause
 
 function CRASH_HANDLER (
-	echo crash.0x01100100F001.%CrashReason%.INCL.%random% > crashHandles_%random%.CRS
+	echo crash.0x01100100F001.%CrashReason%.INCL.%random% > crashHandles_%random%.%random%
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
