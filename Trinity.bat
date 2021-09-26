@@ -96,7 +96,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
-echo 8.songs 9.Spinning Rage
+echo 8.Matrix 9.Spinning Rage
 
 ECHO current time: %time% date: %date% name: %name% 
 
@@ -109,7 +109,7 @@ if %input% == 4 goto randomColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-if %imput% == 8 goto songs
+if %imput% == 8 goto matrix
 if %input% == 9 goto spinningRage
 
 :timeSetter
@@ -247,6 +247,10 @@ cls
 set /p WRITE=Write Your Document 
 echo %WRITE% > %N%.txt
 goto HOME
+:matrix
+cls
+echo %random%
+goto matrix
 :Help
 cls
 echo Text editor is a program made for creating text documents
