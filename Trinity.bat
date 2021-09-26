@@ -103,7 +103,7 @@ echo Booting Butter Trinity ...
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
-echo :-$ > BOOT.INF
+
 goto login
 :login
 cls            
