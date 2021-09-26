@@ -121,8 +121,6 @@ pause
 
 :menu
 cls
-
-
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
