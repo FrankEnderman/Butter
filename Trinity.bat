@@ -121,7 +121,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
-echo 8.Matrix 9.Spinning Rage
+echo 8.Matrix 
 
 ECHO current time: %time% date: %date% name: %name% 
 
@@ -135,7 +135,7 @@ if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
 if %imput% == 8 goto matrix
-if %input% == 9 goto spinningRage
+
 
 :timeSetter
 cls
@@ -312,7 +312,7 @@ if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
 :menu2
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.dir
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
@@ -321,7 +321,7 @@ if %OPTI% == 4 goto help
 if %OPTI% == 5 goto DVDList
 if %OPTI% == 6 goto winterGift
 if %OPTI% == 7 goto story
-if %OPTI% == 8 goto DIR
+if %input% == 8 goto textColor
 :winterGift
 cls
 echo here is the changes:
@@ -462,5 +462,27 @@ goto boot
 :hi
 cls
 echo hi! Remember to do backups!
+pause
+goto menu
+:textColor
+cls
+echo 1.green 2.white 3.gray
+set txtColor= pick:
+if %txtColor% == 1 goto setGreen
+if %txtColor% == 2 goto setWhite
+if %txtColor% == 3 goto setGray
+:setGreen
+color 0a
+echo here you go!
+pause
+goto menu
+:setGray
+color 8
+echo here you go with your text color!
+pause
+goto menu
+:setWhite
+color F
+echo ready!
 pause
 goto menu
