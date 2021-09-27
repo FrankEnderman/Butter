@@ -468,6 +468,6 @@ timeout /T 2 /NOBREAK >nul
 goto boot
 :hi
 cls
-echo hi!
+echo hi! Remember to do backups!
 pause
 goto menu
