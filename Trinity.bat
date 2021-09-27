@@ -249,6 +249,7 @@ cls
 echo Text editor is a program made for creating text documents
 echo Calculator lets you process math problems
 echo BrokenMode is for breaking your computer (DANGEROUS)
+echo Matrix creates random numbers forever (eg. %random%)
 pause
 goto menu
 :DRVList
