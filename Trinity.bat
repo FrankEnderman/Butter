@@ -307,8 +307,6 @@ set /p SD= sel:
 if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
-
-
 :menu2
 echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.dir
 set /p OPTI= select option:
