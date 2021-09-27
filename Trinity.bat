@@ -346,7 +346,7 @@ if %FD% == 2 goto menu
 :ctrlPanel
 cls
 echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
-echo 5.show nuclear show :D 6.NUKE
+echo 5.show nuclear show :D 6.NUKE 7.Hi
 set /p DFF= select:
 if %DFF% == 1 goto powerOptions
 if %DFF% == 2 goto menu2
@@ -354,6 +354,7 @@ if %DFF% == 3 goto menu
 if %DFF% == 4 goto brokenMode
 if %DFF% == 5 goto nuclearIcon
 if %DFF% == 6 goto nuke
+if %DFF% == 7 goto hi
 :nuke
 cls
 echo 1.NUCLEAR ANNIHILATION 2.surrender
@@ -465,3 +466,8 @@ CRASH_HANDLER
 echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
 timeout /T 2 /NOBREAK >nul
 goto boot
+:hi
+cls
+echo hi!
+pause
+goto menu
