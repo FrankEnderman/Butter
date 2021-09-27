@@ -1,6 +1,6 @@
  @echo off
 color 7
-title Butter Trinity Winter 1.4
+title Butter Trinity Winter 1.5 Beta 1
 echo BootSuccessful.%random%.%time%(%date%) > Boot%time%%date%.%random%
 goto boot
 :DIR
@@ -150,17 +150,17 @@ goto menu
 :info
 
 cls
-echo.========================
+echo.===========================
 timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
 timeout /T 1 /NOBREAK >nul
-echo.========================
+echo.===========================
 timeout /T 1 /NOBREAK >nul
 echo     DETAILS  
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.4
+echo     VERSION = Winter 1.5 B1
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -212,15 +212,14 @@ echo %date%
 echo enter 1 to return to menu
 set /p input=
 if %input% == 1 goto menu
-
 :calc
 title Calculator- butter OS
 cls
 title CALCULATOR- butter OS
-ECHO Calculator Version 1.2
+ECHO Calculator Version 1.4
 ECHO * = MULTIPLY
 ECHO + = ADD
-ECHO _ = SUBTRACT
+ECHO - = SUBTRACT
 ECHO / = DIVIDE
 echo % = boolean/remainder
 SET /p UDefine= 
