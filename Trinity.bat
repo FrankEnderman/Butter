@@ -262,12 +262,17 @@ if %input% == 3 goto menu
 
 :productivity
 
-echo 1.notes 2.calculator 3.menu
+echo 1.notes 2.calculator 3.menu 4.browse THE WEB!!
 set /p input= select:
 if %input% == 1 goto TEXT
 if %input% == 2 goto calc
 if %input% == 3 goto menu
-
+if %input% == 4 goto browse
+:browse
+echo Lemme search github 
+pause
+set G = ping github.com
+echo %G%
 :settings
 cls
 echo 1.return to menu 
