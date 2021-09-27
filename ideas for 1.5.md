@@ -12,3 +12,4 @@ be supported until February 5 2023.
 | final | FEATURES!!! | 16 January  2022 |
 | SP 1  | patches     | 16 January  2022 |
 | SP 2  | security    | 17 January  2022 |
+| SP 3  | security    | 5 May 2023       |
