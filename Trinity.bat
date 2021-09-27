@@ -1,6 +1,6 @@
  @echo off
 color 7
-title Butter Trinity v5 SP 3 Winter Edition
+title Butter Trinity Winter 1.4
 echo BootSuccessful.%random%.%time%(%date%) > Boot%time%%date%.%random%
 goto boot
 :DIR
@@ -107,7 +107,7 @@ timeout /T 1 /NOBREAK >nul
 goto login
 :login
 cls            
-echo enter your username
+echo enter your account name
 cls 
 set/p name= enter name:
 if %name% == null set %name% == %username%
@@ -160,7 +160,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = 5 SP 3
+echo     VERSION = Winter 1.4
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -250,8 +250,6 @@ echo Text editor is a program made for creating text documents
 echo Calculator lets you process math problems
 echo BrokenMode is for breaking your computer (DANGEROUS)
 pause
-
-
 goto menu
 :DRVList
 set DVDList= wmic logicaldisk get caption,volumename
