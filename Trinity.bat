@@ -252,14 +252,6 @@ echo BrokenMode is for breaking your computer (DANGEROUS)
 echo Matrix creates random numbers forever (eg. %random%)
 pause
 goto menu
-:DRVList
-set DVDList= wmic logicaldisk get caption,volumename
-
-echo drives: %DVDList% 
-echo press 1 to return to menu
-set /p input=
-if %input% == 1 goto menu
-
 :powerOptions
 cls
 echo 1.reboot 2.boot into windows 3.return to menu 
