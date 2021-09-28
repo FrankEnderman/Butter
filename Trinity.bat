@@ -116,11 +116,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
-
-
 ECHO current time: %time% date: %date% name: %name% 
-
-
 set /p input= choose:
 if %input% == 1 goto info
 if %input% == 2 goto menu2
@@ -129,7 +125,6 @@ if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-
 :info
 cls
 echo.===========================
@@ -240,20 +235,13 @@ set /p input=
 if %input% == 1 goto boot
 if %input% == 2 exit
 if %input% == 3 goto menu
-
 :productivity
-
 echo 1.notes 2.calculator 3.menu 4.browse THE WEB!!
 set /p input= select:
 if %input% == 1 goto TEXT
 if %input% == 2 goto calc
 if %input% == 3 goto menu
 if %input% == 4 goto browse
-:browse
-echo Lemme search github 
-pause
-set G = ping github.com
-echo %G%
 :settings
 cls
 echo 1.return to menu 
@@ -432,7 +420,6 @@ timeout /T 2 /NOBREAK >nul
 echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
-
 function CRASH_HANDLER (
 	echo crash.0x01100100F001.%CrashReason%.INCL.%random% > crashHandles_%random%.%random%
 )
