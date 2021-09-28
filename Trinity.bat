@@ -111,7 +111,7 @@ pause
 cls
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
+echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
 ECHO current time: %time% date: %date% name: %name% 
 set /p input= choose:
 if %input% == 1 goto info
@@ -120,7 +120,13 @@ if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
-if %input% == 7 goto ctrlPanel
+if %input% == 7 goto accessories
+:accessories
+cls
+echo 1.change text color 2.controls
+set FHSK= option:
+if %FHSK% == 1 goto textColor
+if %FHSK% == 2 goto controls
 :info
 echo.===========================
 timeout /T 1 /NOBREAK >nul
