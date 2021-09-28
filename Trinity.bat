@@ -8,8 +8,6 @@ set GF= dir C:\users\%username%\desktop
 echo %GF%
 :boot
 cls
-echo Winter!!!!!!!!!!
-timeout /T 1 /NOBREAK >nul
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 1 /NOBREAK >nul
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
