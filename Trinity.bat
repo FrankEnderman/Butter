@@ -105,7 +105,6 @@ cls
 set/p name= enter name:
 if %name% == null set %name% == %username%
 echo.
-cls
 echo Hello! %name% it is %time% now.
 echo.
 pause
