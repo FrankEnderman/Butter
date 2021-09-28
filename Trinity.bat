@@ -100,8 +100,7 @@ echo Loading.........
 timeout /T 1 /NOBREAK >nul
 
 goto login
-:login
-cls            
+:login            
 echo enter your account name
 cls 
 set/p name= enter name:
