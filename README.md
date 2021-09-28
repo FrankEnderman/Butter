@@ -1,2 +1,4 @@
 # Butter
-a little playground program where I test some stuff
+just a little toy thingy
+## screenshots
+[screenshot one](SDN.png)
