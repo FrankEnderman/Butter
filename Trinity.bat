@@ -125,15 +125,11 @@ set /p input= choose:
 if %input% == 1 goto info
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
-if %input% == 4 goto randomColor
+if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-:randomColor
-cls
-color 0a
-pause 
-goto menu
+
 :info
 cls
 echo.===========================
