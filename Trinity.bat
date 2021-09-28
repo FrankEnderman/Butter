@@ -1,6 +1,6 @@
  @echo off
 color 7
-title Butter Trinity Winter 1.5 Beta 1
+title Butter Trinity Winter 1.5 Beta 2
 echo BootSuccessful.%random%.%time%(%date%) > Boot%time%%date%.%random%
 goto boot
 :DIR
@@ -119,7 +119,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.controls 
-echo 8.Matrix 
+
 
 ECHO current time: %time% date: %date% name: %name% 
 
@@ -132,7 +132,7 @@ if %input% == 4 goto randomColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-if %imput% == 8 goto matrix
+
 
 
 :timeSetter
@@ -158,7 +158,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1
+echo     VERSION = Winter 1.5 B2
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -177,7 +177,7 @@ echo.
 echo    Build = 3
 echo.
 timeout /T 1 /NOBREAK >nul
-echo.=========================
+echo.==========================
 timeout /T 2 /NOBREAK >nul
 echo  @Copyright Interstar.inc 
 timeout /T 2 /NOBREAK >nul
