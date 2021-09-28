@@ -123,7 +123,6 @@ if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
 :info
-cls
 echo.===========================
 timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
