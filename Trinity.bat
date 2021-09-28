@@ -129,21 +129,12 @@ if %input% == 4 goto randomColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto ctrlPanel
-
-
-
-:timeSetter
-cls
-echo enter the time
-set J= NewTime:
-set time= %J%
 :randomColor
 cls
 color 0a
 pause 
 goto menu
 :info
-
 cls
 echo.===========================
 timeout /T 1 /NOBREAK >nul
