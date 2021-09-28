@@ -123,10 +123,11 @@ if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
 :accessories
 cls
-echo 1.change text color 2.controls
+echo 1.change text color 2.controls 3.System Info
 set FHSK= option:
 if %FHSK% == 1 goto textColor
 if %FHSK% == 2 goto controls
+if %FHSK% == 3 goto info
 :info
 echo.===========================
 timeout /T 1 /NOBREAK >nul
