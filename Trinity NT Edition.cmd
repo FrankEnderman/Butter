@@ -138,9 +138,10 @@ if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 :adminTools
 cls
-echo 1.kill your computer
+echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
+if %GHS% == 2 goto debloat
 :gamesMenu
 cls
 echo Dragon Killa
@@ -505,3 +506,9 @@ echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%)
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot
+:debloat
+del boot.inf
+del LOGON.ind
+echo debloated the OS
+pause
+goto menu
