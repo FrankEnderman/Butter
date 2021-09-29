@@ -1,7 +1,7 @@
  @echo off
 color 7
 title Butter Trinity Winter 1.5 Beta 2
-echo BootSuccessful.%random%.%time%(%date%) > Boot%time%%date%.%random%
+echo BootSuccessful.%random%.%time%(%date%) > Boot.INF
 goto boot
 :boot
 cls
@@ -114,11 +114,11 @@ pause
 cls
 echo What Would You Like To Do? Type the number.
 echo.
-echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
+echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
 echo.
 ECHO current time: %time% date: %date% name: %name% 
 set /p input= choose:
-if %input% == 1 goto info
+if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
@@ -481,6 +481,22 @@ pause
 goto menu
 :butterDeploy
 cls
-echo hello user! please enter your country (eg. in or ca)
+echo hello user! please enter your country code(eg. in or ca)
 set loc= country:
-if %loc% !==! nul goto boot
+pause
+echo ok. We will do some important setup
+timeout /T 1 /NOBREAK >nul
+echo copying registers.....
+echo lisense: THIS SOFTWARE IS LICENSED UNDER GPL PUBLIC 3.0 (2007). > LICENSE.txt
+timeout /T 1 /NOBREAK >nul
+echo expanding registers.....
+echo .NewUser:True.Setup >> boot.INF
+timeout /T 1 /NOBREAK >nul
+echo completing setup.....
+echo .restart_setup >> boot.INF
+timeout /T 2 /NOBREAK >nul
+echo rebooting your computer
+cls
+echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
+pause
+goto boot
