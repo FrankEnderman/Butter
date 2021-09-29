@@ -99,10 +99,13 @@ echo Loading.........
 timeout /T 1 /NOBREAK >nul
 goto login
 :login
+echo 01011 > LOGON.ind
 echo enter your account name
 cls 
 set/p name= enter name:
 if %name% == null set %name% == %username%
+echo.
+set country= type country code
 echo.
 echo Hello! %name% it is %time% now.
 echo.
@@ -112,6 +115,7 @@ cls
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.System Info 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
+echo.
 ECHO current time: %time% date: %date% name: %name% 
 set /p input= choose:
 if %input% == 1 goto info
@@ -124,6 +128,7 @@ if %input% == 7 goto accessories
 :accessories
 cls
 echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games
+echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
 if %FHSK% == 2 goto controls
@@ -212,6 +217,7 @@ title Calculator- butter OS
 cls
 title CALCULATOR- butter OS
 ECHO Calculator Version 1.4
+echo.
 ECHO * = MULTIPLY
 ECHO + = ADD
 ECHO - = SUBTRACT
@@ -473,3 +479,8 @@ color F
 echo ready!
 pause
 goto menu
+:butterDeploy
+cls
+echo hello user! please enter your country (eg. in or ca)
+set loc= country:
+if %loc% !==! nul goto boot
