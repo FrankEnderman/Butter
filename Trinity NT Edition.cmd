@@ -127,7 +127,7 @@ if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
 :accessories
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games
+echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER)
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -135,6 +135,12 @@ if %FHSK% == 2 goto controls
 if %FHSK% == 3 goto info
 if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
+if %FHSK% == 6 goto adminTools
+:adminTools
+cls
+echo 1.kill your computer
+set GHS= select:
+if %GHS% == 1 goto brokenMode
 :gamesMenu
 cls
 echo Dragon Killa
