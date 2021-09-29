@@ -481,7 +481,7 @@ pause
 goto menu
 :butterDeploy
 cls
-echo hello user! please enter your country code(eg. in or ca)
+echo hello user! please enter your country code (eg. in)
 set loc= country:
 pause
 echo ok. We will do some important setup
