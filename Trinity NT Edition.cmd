@@ -489,11 +489,9 @@ goto menu
 cls
 echo hello user! please enter your country code (eg. in)
 set loc= country:
-pause
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
-echo lisense: THIS SOFTWARE IS LICENSED UNDER GPL PUBLIC 3.0 (2007). > LICENSE.txt
 timeout /T 1 /NOBREAK >nul
 echo expanding registers.....
 echo .NewUser:True.Setup >> boot.INF
@@ -503,6 +501,7 @@ echo .restart_setup >> boot.INF
 timeout /T 2 /NOBREAK >nul
 echo rebooting your computer
 cls
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%)
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot
