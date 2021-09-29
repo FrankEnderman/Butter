@@ -142,6 +142,11 @@ echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto debloat
+:FATALException
+cls
+echo INCOMPATIBLE!
+pause 
+exit
 :gamesMenu
 cls
 echo Dragon Killa
