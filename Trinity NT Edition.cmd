@@ -451,11 +451,6 @@ CRASH_HANDLER
 echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
 timeout /T 2 /NOBREAK >nul
 goto boot
-:hi
-cls
-echo hi! Remember to do backups!
-pause
-goto menu
 :textColor
 cls
 echo 1.green 2.white 3.gray
