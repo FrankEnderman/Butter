@@ -341,7 +341,6 @@ echo do you want to let this program to change your kernel?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
-
 :ctrlPanel
 cls
 echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
@@ -354,22 +353,6 @@ if %DFF% == 4 goto brokenMode
 if %DFF% == 5 goto nuclearIcon
 if %DFF% == 6 goto nuke
 if %DFF% == 7 goto hi
-:nuke
-cls
-echo 1.NUCLEAR ANNIHILATION 2.surrender
-set IO= press:
-if %IO% == 1 annihilated
-if %IO% == 2 surrender
-:annihilated
-cls 
-echo you kinda lost (deaths: %random%%random%%random%)
-pause
-goto menu
-:surrender
-cls
-echo at least you survived
-pause
-goto menu
 :nuclearIcon
 cls
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
