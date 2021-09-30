@@ -113,6 +113,7 @@ echo.
 pause
 :menu
 cls
+echo .MenuEntry(%time%) [%date%] >> BOOT.INF
 echo What Would You Like To Do? Type the number.
 echo.
 echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
@@ -131,6 +132,7 @@ cls
 echo THIS SUB-SYSTEM IS NOT FINISHED. CHECK BACK AFTER UPDATING TO 
 echo THE LATEST OS VERSION.
 :accessories
+echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
 echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER)
 echo.
@@ -143,6 +145,7 @@ if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 :adminTools
 cls
+echo .AdminToolsOpened(%time%) >> BOOT.INF
 echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
@@ -167,6 +170,7 @@ cls
 pause
 goto menu
 :info
+echo .OpenSysInfo(%time%) >> BOOT.INF
 echo.===========================
 timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
@@ -271,12 +275,14 @@ pause
 goto menu
 :powerOptions
 cls
+echo .EnteredPowerOptions >> BOOT.INF
 echo 1.reboot 2.boot into windows 3.return to menu 
 set /p input=
 if %input% == 1 goto boot
 if %input% == 2 exit
 if %input% == 3 goto menu
 :productivity
+echo .EnterProductivity >> BOOT.INF
 echo 1.notes 2.calculator 3.menu 4.browse THE WEB!!
 set /p input= select:
 if %input% == 1 goto TEXT
@@ -323,6 +329,7 @@ if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
 :menu2
+echo .EnterUsefulMenu(%time%) >> BOOT.INF
 echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
@@ -445,7 +452,7 @@ echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo crash.0x01100100F001.%CrashReason%.INCL.%random% > crashHandles_%random%.%random%
+	echo crash.0x01100100F001.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
