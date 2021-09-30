@@ -114,7 +114,7 @@ set country= type country code
 echo.
 echo Hello! %name% it is %time% now.
 echo.
-echo .LOGON_SUCCESS(1) [%name%] >> BOOT.INF
+echo .LOGON_SUCCESS(1) [%name%].%time% >> BOOT.INF
 pause
 :menu
 cls
