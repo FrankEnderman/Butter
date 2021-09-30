@@ -1,3 +1,8 @@
+:: © Interstar Corp. 
+:: all changes made must include this license.
+:: This software is licensed under GPL 3.0.
+:: Please report a vulnerability, bug or feature at the github page.
+:: - Frank, Developer/owner
  @echo off
 color 7
 title Butter Trinity Winter 1.5 Beta 2
@@ -5,6 +10,7 @@ echo Boot.%random%.%time%(%date%) >> Boot.INF
 goto boot
 :boot
 cls
+:: just some boot animation
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 1 /NOBREAK >nul
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -98,6 +104,7 @@ timeout /T 1 /NOBREAK >nul
 echo .BootComplete(%time%) [%date%] >> BOOT.INF
 goto login
 :login
+:: login (no password inc.)
 echo enter your account name
 cls 
 set/p name= enter name:
@@ -111,6 +118,7 @@ echo .LOGON_SUCCESS(1) [%name%] >> BOOT.INF
 pause
 :menu
 cls
+:: main menu
 echo .MenuEntry(%time%) [%date%] >> BOOT.INF
 echo What Would You Like To Do? Type the number.
 echo.
@@ -144,12 +152,14 @@ if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 :adminTools
 cls
+:: admin tools for... admins
 echo .AdminToolsOpened(%time%) >> BOOT.INF
 echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto debloat
 :FATALException
+:: just some error
 cls
 echo INCOMPATIBLE!
 pause 
@@ -295,10 +305,9 @@ echo set the time:
 set /p OPT= new time
 set %time% == %OPT%
 if %OPT% == 1 goto menu
-:spinningRage
-start "C:\Users\%username%\OneDrive\Desktop\Flipp Flapp v1.2.bat"
 :random
 cls 
+:: random numbers (deprecated)
 echo %random%%random%%random%%random%%random%%random%%random%
 pause
 goto menu
@@ -347,6 +356,7 @@ echo 2.made some cool changes
 pause
 goto menu2
 :UAC
+:: user account control
 cls
 echo do you want to let this program to change your files?
 set /p FD= Yes = 1 No = 2:
@@ -366,6 +376,7 @@ if %DFF% == 6 goto nuke
 if %DFF% == 7 goto hi
 :nuclearIcon
 cls
+:: some nuclear animation in ASCII
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -425,6 +436,7 @@ timeout /T 3 /NOBREAK >nul
 pause
 goto menu
 :brokenMode
+:: intentional crashes 
 set CrashReason == 1
 cls
 echo :(
@@ -481,7 +493,6 @@ echo ready!
 pause
 goto menu
 :butterDeploy
-cls
 echo hello user! please enter your country code (eg. in)
 set loc= country:
 echo ok. We will do some important setup
@@ -506,3 +517,4 @@ del LOGON.ind
 echo debloated the OS
 pause
 goto menu
+:docs
