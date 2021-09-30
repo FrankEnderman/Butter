@@ -31,3 +31,5 @@ The new version system for 1.5 Full Release and beyond
 	- 1.17
 	- 1.18
 	- 1.19
+## What to expect
+the 1.5 Full Release will include a GUI overhaul.
