@@ -125,6 +125,10 @@ if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
+:upgrader
+cls
+echo THIS SUB-SYSTEM IS NOT FINISHED. CHECK BACK AFTER UPDATING TO 
+echo THE LATEST OS VERSION.
 :accessories
 cls
 echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER)
