@@ -337,7 +337,7 @@ pause
 goto menu2
 :UAC
 cls
-echo do you want to let this program to change your kernel?
+echo do you want to let this program to change your files?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
