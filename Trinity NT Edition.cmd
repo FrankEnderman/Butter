@@ -5,7 +5,7 @@
 :: - Frank, Developer/owner
  @echo off
 color 7
-title Butter Trinity Winter 1.5 Beta 2
+title Butter Trinity Winter 1.5 
 echo Boot.%random%.%time%(%date%) >> Boot.INF
 goto boot
 :boot
@@ -164,20 +164,6 @@ if %GHS% == 2 goto debloat
 cls
 echo INCOMPATIBLE!
 pause 
-exit
-:gamesMenu
-cls
-echo Dragon Killa
-pause
-cls
-echo The dragon attacked you!
-pause
-echo press 1 to attack the dragon. press 2 to surrender
-set P= press:
-if %P% == 1 goto win
-:win
-cls
-pause
 goto menu
 :info
 echo .OpenSysInfo(%time%) >> BOOT.INF
@@ -191,7 +177,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B2
+echo     VERSION = Winter 1.5 
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -204,7 +190,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.8.4
+echo     Kernel ver = 5.9.5
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
