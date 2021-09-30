@@ -98,7 +98,6 @@ timeout /T 1 /NOBREAK >nul
 echo .BootComplete(%time%) [%date%] >> BOOT.INF
 goto login
 :login
-echo .LOGON_SUCCESS(1) >> BOOT.INF
 echo enter your account name
 cls 
 set/p name= enter name:
@@ -108,6 +107,7 @@ set country= type country code
 echo.
 echo Hello! %name% it is %time% now.
 echo.
+echo .LOGON_SUCCESS(1) [%name%] >> BOOT.INF
 pause
 :menu
 cls
