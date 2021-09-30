@@ -120,9 +120,9 @@ pause
 cls
 :: main menu
 echo .MenuEntry(%time%) [%date%] >> BOOT.INF
-echo What Would You Like To Do? Type the number.
+echo What Would You Like To Do? Type the number
 echo.
-echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories
+echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories 8.exit
 echo.
 ECHO current time: %time% date: %date% name: %name% 
 set /p input= choose:
@@ -134,6 +134,7 @@ if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
 if %input% == 8 goto COMMANDNOTFOUND
+if %input% == 8 exit
 :COMMANDNOTFOUND
 cls
 echo THE COMMAND NUMBER (%INPUT%) DOES NOT CORRESPOND TO THE TBCS POLICY/DEFINITIONS.
