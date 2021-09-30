@@ -1,7 +1,7 @@
  @echo off
 color 7
 title Butter Trinity Winter 1.5 Beta 2
-echo Boot.%random%.%time%(%date%) > Boot.INF
+echo Boot.%random%.%time%(%date%) >> Boot.INF
 goto boot
 :boot
 cls
@@ -125,6 +125,11 @@ if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
+if %input% == 8 goto COMMANDNOTFOUND
+:COMMANDNOTFOUND
+cls
+echo THE COMMAND NUMBER (%INPUT%) DOES NOT CORRESPOND TO THE TBCS POLICY/DEFINITIONS.
+CRASH_HANDLER
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
@@ -446,7 +451,7 @@ echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo crash.0x01100100F001.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
+	echo .crash.0x01100100F001.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
