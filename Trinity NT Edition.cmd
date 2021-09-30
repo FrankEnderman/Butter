@@ -88,9 +88,7 @@ timeout /T 1 /NOBREAK >nul
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 1 /NOBREAK >nul
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 3 /NOBREAK >nul
-echo welcome!
-timeout /T 1 /NOBREAK >nul
+timeout /T 2 /NOBREAK >nul
 echo finding kernel.......
 timeout /T 1 /NOBREAK >nul
 echo Booting Butter Trinity ... 
@@ -127,10 +125,6 @@ if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
-:upgrader
-cls
-echo THIS SUB-SYSTEM IS NOT FINISHED. CHECK BACK AFTER UPDATING TO 
-echo THE LATEST OS VERSION.
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
