@@ -2,6 +2,7 @@
 :: all changes made must include this license.
 :: This software is licensed under GPL 3.0.
 :: Please report a vulnerability, bug or feature at the github page.
+:: contact me at buttertheidiot@gmail.com
 :: - Frank, Developer/owner
  @echo off
 color 7
@@ -499,10 +500,3 @@ echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%)
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot
-:debloat
-del boot.inf
-del LOGON.ind
-echo debloated the OS
-pause
-goto menu
-:docs
