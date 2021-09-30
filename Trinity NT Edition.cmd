@@ -162,6 +162,7 @@ if %GHS% == 2 goto debloat
 :FATALException
 :: just some error
 cls
+echo .Incompatible.feature(%time%)
 echo INCOMPATIBLE!
 pause 
 goto menu
