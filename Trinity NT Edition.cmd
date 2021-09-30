@@ -422,7 +422,7 @@ goto menu
 :brokenMode
 set CrashReason == 1
 cls
-echo =(
+echo :(
 timeout /T 2 /NOBREAK >nul
 echo %random%
 timeout /T 2 /NOBREAK >nul
