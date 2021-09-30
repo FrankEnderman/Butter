@@ -1,7 +1,7 @@
  @echo off
 color 7
 title Butter Trinity Winter 1.5 Beta 2
-echo BootSuccessful.%random%.%time%(%date%) > Boot.INF
+echo Boot.%random%.%time%(%date%) > Boot.INF
 goto boot
 :boot
 cls
@@ -97,9 +97,10 @@ echo Booting Butter Trinity ...
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
+echo .BootComplete(%time%) [%date%] >> BOOT.INF
 goto login
 :login
-echo 01011 > LOGON.ind
+echo .LOGON_SUCCESS(1) >> BOOT.INF
 echo enter your account name
 cls 
 set/p name= enter name:
