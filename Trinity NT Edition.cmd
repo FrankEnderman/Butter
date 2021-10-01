@@ -2,14 +2,17 @@
 :: all changes made must include this license.
 :: This software is licensed under GPL 3.0.
 :: Please report a vulnerability, bug or feature at the github page.
-:: contact me at buttertheidiot@gmail.com
+:: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
  @echo off
+ :: sets color to white
 color 7
+:: sets title
 title Butter Trinity Winter 1.5 
+:: adds boot info to Boot.INF file
 echo Boot.%random%.%time%(%date%) >> Boot.INF
-goto boot
 :boot
+:: clears messages on boot
 cls
 :: just some boot animation
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -102,8 +105,8 @@ echo Booting Butter Trinity ...
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
-echo .BootComplete(%time%) [%date%] >> BOOT.INF
-goto login
+:: logs boot complete event
+echo .BootComplete(%time%) >> BOOT.INF
 :login
 :: login (no password inc.)
 echo enter your account name
@@ -125,7 +128,9 @@ echo What Would You Like To Do? Type the number
 echo.
 echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories 8.exit
 echo.
+:: shows current time/date
 ECHO current time: %time% date: %date% name: %name% 
+:: control points
 set /p input= choose:
 if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
@@ -503,6 +508,7 @@ set loc= country:
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
+echo .NameOfKernel(%~dpn0 ).%time% >> Boot.inf
 timeout /T 1 /NOBREAK >nul
 echo expanding registers.....
 echo .NewUser:True.Setup >> boot.INF
@@ -512,7 +518,7 @@ echo .restart_setup >> boot.INF
 timeout /T 2 /NOBREAK >nul
 echo rebooting your computer
 cls
-echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%)
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Boot.inf
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
-goto boot
+goto boot 
