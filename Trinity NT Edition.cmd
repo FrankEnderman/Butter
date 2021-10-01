@@ -274,13 +274,17 @@ goto menu
 :powerOptions
 cls
 echo .EnteredPowerOptions >> BOOT.INF
+:: power options
 echo 1.reboot 2.boot into windows 3.return to menu 
+:: number inputs
 set /p input=
 if %input% == 1 goto boot
 if %input% == 2 exit
 if %input% == 3 goto menu
 :productivity
+:: logging
 echo .EnterProductivity >> BOOT.INF
+:: productivity tools
 echo 1.notes 2.calculator 3.menu 4.browse THE WEB!!
 set /p input= select:
 if %input% == 1 goto TEXT
@@ -308,11 +312,13 @@ if %direct% == 1 goto cal
 if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :browser
+:: will remove later
 cls
 start iexplore
 pause
 exit
 :searchHistoryFinder
+:: search history stuff
 for /f "delims=: tokens=2" %%i in ('ipconfig /displaydns^|find "Record Name"') do (find "%%i" /i history.txt >nul 2>&1|| echo %%i >>history.txt echo %%i)
 timeout /nobreak 5 >nul 2>&1
 sort history.txt /o history.txt
@@ -322,6 +328,7 @@ exit
 :browserMenu
 :: browser stuff
 echo 1.start browser 2.view search history 3.menu
+:: code for selecting options
 set /p SD= sel:
 if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
