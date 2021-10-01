@@ -320,13 +320,16 @@ goto searchHistoryFinder
 pause
 exit
 :browserMenu
+:: browser stuff
 echo 1.start browser 2.view search history 3.menu
 set /p SD= sel:
 if %SD% == 1 goto browser
 if %SD% == 2 goto searchHistoryFinder
 if %SD% == 3 goto menu
 :menu2
+:: logging 
 echo .EnterUsefulMenu(%time%) >> BOOT.INF
+:: some other menu
 echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
@@ -338,6 +341,7 @@ if %OPTI% == 6 goto winterGift
 if %OPTI% == 7 goto story
 if %input% == 8 goto textColor
 :winterGift
+:: some deprecated feature (will remove in SP 1)
 cls
 echo here is the changes:
 echo 1.changed the text color
@@ -352,6 +356,7 @@ set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
 :ctrlPanel
+:: the title says it all...
 cls
 echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
 echo 5.show nuclear show :D 6.NUKE 7.Hi
