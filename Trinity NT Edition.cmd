@@ -119,6 +119,7 @@ echo.
 echo Hello! %name% it is %time% now.
 echo.
 echo .LOGON_SUCCESS(1) [%name%].%time% >> BOOT.INF
+:: waits for user input
 pause
 :menu
 cls
@@ -139,7 +140,7 @@ if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
 if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
-if %input% == 8 goto COMMANDNOTFOUND
+if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
 :COMMANDNOTFOUND
 cls
