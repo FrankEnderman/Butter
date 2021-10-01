@@ -460,6 +460,7 @@ echo Oh! we are taking you to the boot screen because you initiated a crash :) a
 timeout /T 2 /NOBREAK >nul
 goto boot
 :textColor
+:: set the text color
 cls
 echo 1.green 2.white 3.gray
 set txtColor= pick:
@@ -482,6 +483,7 @@ echo ready!
 pause
 goto menu
 :butterDeploy
+:: login/setup interface
 echo hello user! please enter your country code (eg. in)
 set loc= country:
 echo ok. We will do some important setup
