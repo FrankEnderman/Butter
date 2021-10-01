@@ -259,11 +259,13 @@ cls
 set /p WRITE=Write Your Document 
 echo %WRITE% > %N%.txt
 goto HOME
-:matrix
+:randomNumberGen
 cls
-echo %random%
-goto matrix
+echo random number: %random% 
+pause
+goto menu
 :Help
+:: help feature
 cls
 echo Text editor is a program made for creating text documents
 echo Calculator lets you process math problems
