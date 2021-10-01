@@ -142,10 +142,6 @@ if %input% == 6 goto browserMenu
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
-:COMMANDNOTFOUND
-cls
-echo THE COMMAND NUMBER (%INPUT%) DOES NOT CORRESPOND TO THE TBCS POLICY/DEFINITIONS.
-CRASH_HANDLER
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
@@ -169,8 +165,8 @@ if %GHS% == 2 goto debloat
 :FATALException
 :: just some error
 cls
-echo .Incompatible.feature(%time%)
-echo INCOMPATIBLE!
+echo .COMMANDNOTFOUND.%INPUT% (%time%)
+echo 404 COMMAND NOT FOUND.
 pause 
 goto menu
 :info
