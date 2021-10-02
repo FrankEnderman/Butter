@@ -243,11 +243,11 @@ cls
 title CALCULATOR- butter OS
 ECHO Calculator Version 1.5
 echo.
-ECHO * = MULTIPLY
-ECHO + = ADD
-ECHO - = SUBTRACT
-ECHO / = DIVIDE
-echo % = even 
+ECHO * = Multiply
+ECHO + = Add
+ECHO - = Minus
+ECHO / = Divide
+echo % = Even 
 SET /p UDefine= 
 SET /a UDefine=%UDefine%
 ECHO =
