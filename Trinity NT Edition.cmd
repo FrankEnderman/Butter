@@ -161,11 +161,6 @@ echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto debloat
-:areyouaidiot
-cls
-echo you have %random% iq. (60 or lower iq means insanity)
-pause 
-goto menu
 :FATALException
 :: just some error
 cls
@@ -277,7 +272,7 @@ goto menu
 cls
 echo .EnteredPowerOptions >> BOOT.INF
 :: power options
-echo 1.reboot 2.boot into windows 3.return to menu 
+echo 1.Reboot 2.Boot into windows 3.Return to menu 
 :: number inputs
 set /p input=
 if %input% == 1 goto boot
@@ -287,7 +282,7 @@ if %input% == 3 goto menu
 :: logging
 echo .EnterProductivity >> BOOT.INF
 :: productivity tools
-echo 1.notes 2.calculator 3.menu 4.browse THE WEB!!
+echo 1.Notes 2.Calculator 3.Menu 4.Browse the Internet
 set /p input= select:
 if %input% == 1 goto TEXT
 if %input% == 2 goto calc
@@ -353,7 +348,7 @@ goto menu
 :ctrlPanel
 :: the title says it all...
 cls
-echo 1.power options 2.productivity 3.menu 4.BROKEN MODE (DANGER)
+echo 1.Power options 2.Productivity 3.Menu 4.BROKEN MODE (DANGER)
 echo 5.show nuclear show :D 6.NUKE 7.Hi
 set /p DFF= select:
 if %DFF% == 1 goto powerOptions
