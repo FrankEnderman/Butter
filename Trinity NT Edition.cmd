@@ -153,6 +153,8 @@ if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto OSInfo
 if %FHSK% == 8 goto areyouaidiot
+:notefromthedev
+cls
 :adminTools
 cls
 :: admin tools for... admins
@@ -164,6 +166,8 @@ if %GHS% == 2 goto debloat
 :areyouaidiot
 cls
 echo you have %random% iq. (60 or lower iq means insanity)
+pause 
+goto menu
 :FATALException
 :: just some error
 cls
