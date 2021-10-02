@@ -127,7 +127,7 @@ echo .MenuEntry(%time%) >> BOOT.INF
 echo What Would You Like To Do? Type the number
 echo.
 :: shows options
-echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories 8.exit
+echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.edit data 7.accessories 8.exit
 echo.
 :: shows current time/date
 ECHO current time: %time% date: %date% name: %name% 
@@ -138,7 +138,7 @@ if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto timeSetter
-if %input% == 6 goto browserMenu
+if %input% == 6 goto savesomething
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
@@ -159,17 +159,10 @@ if %FHSK% == 7 goto OSInfo
 cls
 :: admin tools for... admins
 echo .AdminToolsOpened(%time%) >> BOOT.INF
-echo 1.kill your computer 2.debloat/delete register
+echo 1.kill your computer 2.add data
 set GHS= select:
 if %GHS% == 1 goto brokenMode
-if %GHS% == 2 goto debloat
-:FATALException
-:: just some error
-cls
-echo .COMMANDNOTFOUND.%INPUT% (%time%)
-echo 0x194 COMMAND NOT FOUND. (BIN: 1 1001 0100)
-pause 
-goto menu
+
 :info
 echo .OpenSysInfo(%time%) >> BOOT.INF
 echo.==============================
@@ -253,12 +246,10 @@ pause
 goto menu
 :TEXT
 cls
-echo TEXT EDITOR 1.2
-echo Enter name of the text file you want to make
-echo. 
-set /p N=Name 
+echo TEXT EDITOR 1.3
+set /p N= document name: 
 cls
-set /p WRITE=Write Your Document 
+set /p WRITE=Write:
 echo %WRITE% > %N%.txt
 goto menu
 :Help
@@ -514,3 +505,11 @@ echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Boot.
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot 
+:savesomething
+cls
+set valueName= enter your value number:
+set val= value:
+echo %val% >> %valueName%
+echo complete!
+pause
+goto adminTools
