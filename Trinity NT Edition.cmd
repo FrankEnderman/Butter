@@ -142,7 +142,7 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info
+echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info 8. are you a idiot
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -152,6 +152,7 @@ if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto OSInfo
+if %FHSK% == 8 goto areyouaidiot
 :adminTools
 cls
 :: admin tools for... admins
@@ -160,6 +161,9 @@ echo 1.kill your computer 2.debloat/delete register
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto debloat
+:areyouaidiot
+cls
+echo you have %random% iq. (60 or lower iq means insanity)
 :FATALException
 :: just some error
 cls
