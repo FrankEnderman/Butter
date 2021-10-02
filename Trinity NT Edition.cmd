@@ -4,13 +4,14 @@
 :: Please report a vulnerability, bug or feature at the github page.
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
+:: turns echo off (hides the code)
  @echo off
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1943
+title Butter Trinity Winter 1.5 Build 1944
 :: adds boot info to Boot.INF file
-echo Boot.%random%.%time%(%date%) >> Boot.INF
+echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Boot.INF
 :boot
 :: clears messages on boot
 cls
@@ -120,8 +121,9 @@ echo .UserInputGiven(%time%) >> BOOT.inf
 cls
 :menu
 cls
-:: main menu
+:: logs menu entry
 echo .MenuEntry(%time%) >> BOOT.INF
+:: main menu
 echo What Would You Like To Do? Type the number
 echo.
 :: shows options
@@ -180,7 +182,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1943
+echo     VERSION = Winter 1.5 B1944
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -341,7 +343,7 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1943
+echo version: 1.5 Build 1944
 echo KERNEL: Trinity NT 1.1
 pause
 goto menu
@@ -481,7 +483,20 @@ goto menu
 :butterDeploy
 :: login/setup interface
 echo hello user! please enter your country code (eg. in)
-set loc= country:
+pause
+echo .
+echo .LoadingStart(%time%) >> BOOT.INF
+timeout /T 1 /NOBREAK >nul
+echo ..
+timeout /T 1 /NOBREAK >nul
+echo ...
+timeout /T 1 /NOBREAK >nul
+echo ....
+timeout /T 1 /NOBREAK >nul
+echo .....
+timeout /T 1 /NOBREAK >nul
+echo ......
+timeout /T 1 /NOBREAK >nul
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
