@@ -142,7 +142,7 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER)
+echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -151,6 +151,7 @@ if %FHSK% == 3 goto info
 if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
+if %FHSK% == 7 goto OSInfo
 :adminTools
 cls
 :: admin tools for... admins
@@ -258,11 +259,6 @@ cls
 set /p WRITE=Write Your Document 
 echo %WRITE% > %N%.txt
 goto HOME
-:randomNumberGen
-cls
-echo random number: %random% 
-pause
-goto menu
 :Help
 :: help feature
 cls
@@ -357,6 +353,15 @@ echo do you want to let this program to change your files?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
+:OSInfo
+cls
+echo ======================
+echo        BUTTER OS
+echo ======================
+echo version: 1.5 SP 2
+echo KERNEL: Trinity NT 1.0
+pause
+goto menu
 :ctrlPanel
 :: the title says it all...
 cls
