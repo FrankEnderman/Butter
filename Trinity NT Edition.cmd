@@ -107,7 +107,6 @@ echo Loading.........
 timeout /T 1 /NOBREAK >nul
 :: logs boot complete event
 echo .BootComplete(%time%) >> BOOT.INF
-:login
 :: login (no password inc.)
 echo enter your account name
 cls 
@@ -127,6 +126,7 @@ cls
 echo .MenuEntry(%time%) [%date%] >> BOOT.INF
 echo What Would You Like To Do? Type the number
 echo.
+:: shows options
 echo 1.SETUP (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.browser menu  7.accessories 8.exit
 echo.
 :: shows current time/date
