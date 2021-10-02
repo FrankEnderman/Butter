@@ -119,9 +119,11 @@ echo Hello! %name% it is %time% now.
 echo.
 echo .LOGON_SUCCESS(1) [%name%].%time% >> BOOT.INF
 :: waits for user input
+echo .WaaitingUserInput(%time%) >> BOOT.inf
 pause
-:menu
+echo .UserInputGiven(%time%) >> BOOT.inf
 cls
+:menu
 :: main menu
 echo .MenuEntry(%time%) [%date%] >> BOOT.INF
 echo What Would You Like To Do? Type the number
