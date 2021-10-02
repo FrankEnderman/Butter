@@ -227,7 +227,6 @@ echo %date%
 pause
 goto menu
 :calc
-title Calculator- butter OS
 cls
 title CALCULATOR- butter OS
 ECHO Calculator Version 1.5
@@ -245,6 +244,7 @@ ECHO.
 pause
 goto menu
 :TEXT
+echo .EnterTextEditor(%time%) >> BOOT.INF
 cls
 echo TEXT EDITOR 1.3
 set /p N= document name: 
