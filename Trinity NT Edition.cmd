@@ -8,7 +8,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 
+title Butter Trinity Winter 1.5 Build 1942
 :: adds boot info to Boot.INF file
 echo Boot.%random%.%time%(%date%) >> Boot.INF
 :boot
@@ -119,8 +119,9 @@ pause
 echo .UserInputGiven(%time%) >> BOOT.inf
 cls
 :menu
+cls
 :: main menu
-echo .MenuEntry(%time%) [%date%] >> BOOT.INF
+echo .MenuEntry(%time%) >> BOOT.INF
 echo What Would You Like To Do? Type the number
 echo.
 :: shows options
@@ -142,7 +143,7 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> BOOT.INF 
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info 8. are you a idiot
+echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info 
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -152,9 +153,6 @@ if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto OSInfo
-if %FHSK% == 8 goto areyouaidiot
-:notefromthedev
-cls
 :adminTools
 cls
 :: admin tools for... admins
@@ -172,22 +170,22 @@ goto menu
 :: just some error
 cls
 echo .COMMANDNOTFOUND.%INPUT% (%time%)
-echo 404 COMMAND NOT FOUND.
+echo 0x194 COMMAND NOT FOUND. (BIN: 1 1001 0100)
 pause 
 goto menu
 :info
 echo .OpenSysInfo(%time%) >> BOOT.INF
-echo.===========================
+echo.==============================
 timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
 timeout /T 1 /NOBREAK >nul
-echo.===========================
+echo.==============================
 timeout /T 1 /NOBREAK >nul
 echo     DETAILS  
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 
+echo     VERSION = Winter 1.5 B1942
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -200,7 +198,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.9.5
+echo     Kernel ver = 5.9.6
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
@@ -243,13 +241,13 @@ if %input% == 1 goto menu
 title Calculator- butter OS
 cls
 title CALCULATOR- butter OS
-ECHO Calculator Version 1.4
+ECHO Calculator Version 1.5
 echo.
 ECHO * = MULTIPLY
 ECHO + = ADD
 ECHO - = SUBTRACT
 ECHO / = DIVIDE
-echo % = boolean/remainder
+echo % = even 
 SET /p UDefine= 
 SET /a UDefine=%UDefine%
 ECHO =
@@ -259,14 +257,14 @@ pause
 goto menu
 :TEXT
 cls
-echo TEXT EDITOR 1.1
+echo TEXT EDITOR 1.2
 echo Enter name of the text file you want to make
 echo. 
 set /p N=Name 
 cls
 set /p WRITE=Write Your Document 
 echo %WRITE% > %N%.txt
-goto HOME
+goto menu
 :Help
 :: help feature
 cls
@@ -310,42 +308,25 @@ set /p direct= select:
 if %direct% == 1 goto cal
 if %direct% == 2 goto clock
 if %direct% == 3 goto menu
-:browser
-:: will remove later
-cls
-start iexplore
-pause
-exit
-:searchHistoryFinder
-:: search history stuff
-for /f "delims=: tokens=2" %%i in ('ipconfig /displaydns^|find "Record Name"') do (find "%%i" /i history.txt >nul 2>&1|| echo %%i >>history.txt echo %%i)
-timeout /nobreak 5 >nul 2>&1
-sort history.txt /o history.txt
-goto searchHistoryFinder
-pause
-exit
-:browserMenu
-:: browser stuff
-echo 1.start browser 2.view search history 3.menu
-:: code for selecting options
-set /p SD= sel:
-if %SD% == 1 goto browser
-if %SD% == 2 goto searchHistoryFinder
-if %SD% == 3 goto menu
 :menu2
 :: logging 
 echo .EnterUsefulMenu(%time%) >> BOOT.INF
 :: some other menu
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.unwrap the Winter Gift 7.story 8.personalize
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.additional 7.story 8.personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto ASCIIPaintings
 if %OPTI% == 4 goto help
 if %OPTI% == 5 goto DVDList
-if %OPTI% == 6 goto winterGift
+if %OPTI% == 6 goto additional
 if %OPTI% == 7 goto story
 if %input% == 8 goto textColor
+:additional
+cls
+echo 1.are ya a idiot
+set SD= pick:
+if %SD% == 1 goto areyouaidiot
 :winterGift
 :: some deprecated feature (will remove in SP 1)
 cls
@@ -363,10 +344,10 @@ if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
 :OSInfo
 cls
-echo ======================
-echo        BUTTER OS
-echo ======================
-echo version: 1.5 SP 2
+echo ========================
+echo         BUTTER OS
+echo ========================
+echo version: 1.5 Build 1942
 echo KERNEL: Trinity NT 1.0
 pause
 goto menu
@@ -384,6 +365,7 @@ if %DFF% == 5 goto nuclearIcon
 if %DFF% == 6 goto nuke
 if %DFF% == 7 goto hi
 :nuclearIcon
+:: clear screen command
 cls
 :: some nuclear animation in ASCII
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -458,7 +440,7 @@ echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%ra
 timeout /T 3 /NOBREAK >nul
 echo DRIVE CORRUPT
 timeout /T 1 /NOBREAK >nul
-echo 0x010100000000 DOS error 
+echo DID YOU CRASH IT INTENTIONALLY?!?!??!?!?!??!?
 timeout /T 5 /NOBREAK >nul
 echo please wait......
 timeout /T 7 /NOBREAK >nul
