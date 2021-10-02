@@ -8,7 +8,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1942
+title Butter Trinity Winter 1.5 Build 1943
 :: adds boot info to Boot.INF file
 echo Boot.%random%.%time%(%date%) >> Boot.INF
 :boot
@@ -185,7 +185,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1942
+echo     VERSION = Winter 1.5 B1943
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -204,14 +204,14 @@ echo.
 echo    Build = 3
 echo.
 timeout /T 1 /NOBREAK >nul
-echo.==========================
+echo.==============================
 timeout /T 2 /NOBREAK >nul
 echo  @Copyright Interstar.inc 
 timeout /T 2 /NOBREAK >nul
 echo.
 echo  GPL Public Liscense 3.0
 timeout /T 2 /NOBREAK >nul
-echo.=========================
+echo.==============================
 timeout /T 2 /NOBREAK >nul
 echo     account
 timeout /T 1 /NOBREAK >nul
@@ -234,9 +234,8 @@ goto menu
 :cal
 cls 
 echo %date%
-echo enter 1 to return to menu
-set /p input=
-if %input% == 1 goto menu
+pause
+goto menu
 :calc
 title Calculator- butter OS
 cls
@@ -347,8 +346,8 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1942
-echo KERNEL: Trinity NT 1.0
+echo version: 1.5 Build 1943
+echo KERNEL: Trinity NT 1.1
 pause
 goto menu
 :ctrlPanel
