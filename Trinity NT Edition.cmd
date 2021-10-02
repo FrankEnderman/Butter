@@ -269,7 +269,7 @@ cls
 echo Text editor is a program made for creating text documents
 echo Calculator lets you process math problems
 echo BrokenMode is for breaking your computer (DANGEROUS)
-echo Matrix creates random numbers forever (eg. %random%)
+echo here is a random number %random% :D
 pause
 goto menu
 :powerOptions
@@ -299,12 +299,6 @@ echo set the time:
 set /p OPT= new time
 set %time% == %OPT%
 if %OPT% == 1 goto menu
-:random
-cls 
-:: random numbers (deprecated)
-echo %random%%random%%random%%random%%random%%random%%random%
-pause
-goto menu
 :datesMenu
 cls
 echo 1.calendar 2.time 3.menu
