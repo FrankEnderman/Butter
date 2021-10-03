@@ -299,13 +299,12 @@ if %direct% == 3 goto menu
 :: logging 
 echo .EnterUsefulMenu(%time%) >> BOOT.INF
 :: some other menu
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.Drive List 6.additional 7.story 8.personalize
+echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.huh 6.additional 7.story 8.personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto ASCIIPaintings
 if %OPTI% == 4 goto help
-if %OPTI% == 5 goto DVDList
 if %OPTI% == 6 goto additional
 if %OPTI% == 7 goto story
 if %input% == 8 goto textColor
@@ -513,3 +512,6 @@ echo %val% >> %valueName%
 echo complete!
 pause
 goto adminTools
+:huh
+cls
+echo hmm...  
