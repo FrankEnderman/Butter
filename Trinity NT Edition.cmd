@@ -510,14 +510,3 @@ echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Boot.
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot 
-:savesomething
-cls
-set valueName= enter your value number:
-set val= value:
-echo %val% >> %valueName%
-echo complete!
-pause
-goto adminTools
-:huh
-cls
-echo hmm...  
