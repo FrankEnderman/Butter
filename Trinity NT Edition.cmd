@@ -9,7 +9,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1944
+title Butter Trinity Winter 1.5 Build 1945
 :: adds boot info to Boot.INF file
 echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Boot.INF
 :boot
@@ -175,7 +175,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1944
+echo     VERSION = Winter 1.5 B1945
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -188,7 +188,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.9.6
+echo     Kernel ver = 5.9.7
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
@@ -333,7 +333,7 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1944
+echo version: 1.5 Build 1945
 echo KERNEL: Trinity NT 1.1
 pause
 goto menu
