@@ -159,7 +159,7 @@ if %FHSK% == 7 goto OSInfo
 cls
 :: admin tools for... admins
 echo .AdminToolsOpened(%time%) >> Logs.inf
-echo 1.kill your computer 2.add data
+echo 1.kill your computer 
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 
@@ -492,6 +492,8 @@ timeout /T 1 /NOBREAK >nul
 echo ......
 timeout /T 1 /NOBREAK >nul
 echo .......
+timeout /T 1 /NOBREAK >nul
+echo ........
 timeout /T 1 /NOBREAK >nul
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
