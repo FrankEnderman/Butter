@@ -214,6 +214,9 @@ echo  time: %time%
 timeout /T 1 /NOBREAK >nul
 echo.
 echo  date: %date%
+echo.==============================
+echo            The End
+echo.==============================
 pause
 goto menu
 :clock 
