@@ -498,7 +498,7 @@ timeout /T 1 /NOBREAK >nul
 echo completing setup.....
 echo .restart_setup >> boot.INF
 timeout /T 2 /NOBREAK >nul
-echo rebooting your computer
+echo 95% complete......
 cls
 echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Boot.inf
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
