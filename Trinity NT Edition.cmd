@@ -9,9 +9,9 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1945
-:: adds boot info to Boot.INF file
-echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Boot.INF
+title Butter Trinity Winter 1.5 Build 1946
+:: adds boot info to Logs.inf file
+echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Logs.inf
 :boot
 :: clears messages on boot
 cls
@@ -102,7 +102,7 @@ timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
 :: logs boot complete event
-echo .BootComplete(%time%) >> BOOT.INF
+echo .BootComplete(%time%) >> Logs.inf
 :: login (no password inc.)
 echo enter your account name
 cls 
@@ -113,16 +113,16 @@ set country= type country code
 echo.
 echo Hello! %name% it is %time% now.
 echo.
-echo .LOGON_SUCCESS(1) [%name%].%time% >> BOOT.INF
+echo .LOGON_SUCCESS(1) [%name%].%time% >> Logs.inf
 :: waits for user input
-echo .WaaitingUserInput(%time%) >> BOOT.inf
+echo .WaaitingUserInput(%time%) >> Logs.inf
 pause
-echo .UserInputGiven(%time%) >> BOOT.inf
+echo .UserInputGiven(%time%) >> Logs.inf
 cls
 :menu
 cls
 :: logs menu entry
-echo .MenuEntry(%time%) >> BOOT.INF
+echo .MenuEntry(%time%) >> Logs.inf
 :: main menu
 echo What Would You Like To Do? Type the number
 echo.
@@ -143,7 +143,7 @@ if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
 :accessories
-echo .AccessoryOpened (%time%) >> BOOT.INF 
+echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
 echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info 
 echo.
@@ -158,13 +158,13 @@ if %FHSK% == 7 goto OSInfo
 :adminTools
 cls
 :: admin tools for... admins
-echo .AdminToolsOpened(%time%) >> BOOT.INF
+echo .AdminToolsOpened(%time%) >> Logs.inf
 echo 1.kill your computer 2.add data
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 
 :info
-echo .OpenSysInfo(%time%) >> BOOT.INF
+echo .OpenSysInfo(%time%) >> Logs.inf
 echo.==============================
 timeout /T 1 /NOBREAK >nul
 echo     Butter Trinity OS
@@ -175,7 +175,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1945
+echo     VERSION = Winter 1.5 B1946
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -188,7 +188,7 @@ timeout /T 1 /NOBREAK >nul
 echo     HARD_DRIVE = 250GB     
 echo.   
 timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.9.7
+echo     Kernel ver = 5.9.8
 timeout /T 1 /NOBREAK >nul
 echo.  
 echo    Build = 3
@@ -247,7 +247,7 @@ ECHO.
 pause
 goto menu
 :TEXT
-echo .EnterTextEditor(%time%) >> BOOT.INF
+echo .EnterTextEditor(%time%) >> Logs.inf
 cls
 echo TEXT EDITOR 1.3
 set /p N= document name: 
@@ -266,7 +266,7 @@ pause
 goto menu
 :powerOptions
 cls
-echo .EnteredPowerOptions >> BOOT.INF
+echo .EnteredPowerOptions >> Logs.inf
 :: power options
 echo 1.Reboot 2.Boot into windows 3.Return to menu 
 :: number inputs
@@ -276,7 +276,7 @@ if %input% == 2 exit
 if %input% == 3 goto menu
 :productivity
 :: logging
-echo .EnterProductivity >> BOOT.INF
+echo .EnterProductivity >> Logs.inf
 :: productivity tools
 echo 1.Notes 2.Calculator 3.Menu 4.Browse the Internet
 set /p input= select:
@@ -300,7 +300,7 @@ if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :menu2
 :: logging 
-echo .EnterUsefulMenu(%time%) >> BOOT.INF
+echo .EnterUsefulMenu(%time%) >> Logs.inf
 :: some other menu
 echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.huh 6.additional 7.story 8.personalize
 set /p OPTI= select option:
@@ -336,7 +336,7 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1945
+echo version: 1.5 Build 1946
 echo KERNEL: Trinity NT 1.1
 pause
 goto menu
@@ -445,7 +445,7 @@ echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
+	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> Logs.inf
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -479,7 +479,7 @@ goto menu
 :: login/setup interface
 pause
 echo .
-echo .LoadingStart(%time%) >> BOOT.INF
+echo .LoadingStart(%time%) >> Logs.inf
 timeout /T 1 /NOBREAK >nul
 echo ..
 timeout /T 1 /NOBREAK >nul
@@ -496,17 +496,17 @@ timeout /T 1 /NOBREAK >nul
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
-echo .NameOfKernel(%~dpn0 ).%time% >> Boot.inf
+echo .NameOfKernel(%~dpn0 ).%time% >> Logs.inf
 timeout /T 1 /NOBREAK >nul
 echo expanding registers.....
-echo .NewUser:True.Setup >> boot.INF
+echo .NewUser:True.Setup >> Logs.inf
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
-echo .restart_setup >> boot.INF
+echo .restart_setup >> Logs.inf
 timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
-echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Boot.inf
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.inf
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot 
