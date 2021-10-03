@@ -345,8 +345,10 @@ goto menu
 cls
 echo 1.Power options 2.Productivity 3.Menu 4.BROKEN MODE (DANGER)
 echo 5.show nuclear show :D 6.NUKE 7.Hi
+:: decalre variable
 set /p DFF= select:
-if %DFF% == 1 goto powerOptions
+:: if conditions
+if %DFF% == 1 goto powerOptions 
 if %DFF% == 2 goto menu2
 if %DFF% == 3 goto menu
 if %DFF% == 4 goto brokenMode
