@@ -445,7 +445,7 @@ echo BOOTING INTO TRINITY RRBI
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.0x01100100F001.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
+	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> BOOT.INF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
