@@ -477,7 +477,6 @@ pause
 goto menu
 :butterDeploy
 :: login/setup interface
-echo hello user! please enter your country code (eg. in)
 pause
 echo .
 echo .LoadingStart(%time%) >> BOOT.INF
@@ -491,6 +490,8 @@ timeout /T 1 /NOBREAK >nul
 echo .....
 timeout /T 1 /NOBREAK >nul
 echo ......
+timeout /T 1 /NOBREAK >nul
+echo .......
 timeout /T 1 /NOBREAK >nul
 echo ok. We will do some important setup
 timeout /T 1 /NOBREAK >nul
