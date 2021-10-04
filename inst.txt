@@ -1,0 +1,3 @@
+Calculator is for calculating numbers.
+Text Edit edits files.
+enjoy!
