@@ -327,7 +327,7 @@ goto menu2
 :UAC
 :: user account control
 cls
-echo do you want to let this program to change your files?
+echo do you want to let Text Editor to change your files?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
