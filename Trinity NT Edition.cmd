@@ -286,7 +286,7 @@ if %input% == 3 goto menu
 if %input% == 4 goto browse
 :settings
 cls
-echo 1.return to menu 
+echo 1.Return to Menu 
 echo set the time:
 set /p OPT= new time
 set %time% == %OPT%
