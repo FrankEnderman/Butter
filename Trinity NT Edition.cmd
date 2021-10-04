@@ -231,7 +231,7 @@ pause
 goto menu
 :calc
 cls
-title CALCULATOR- butter OS
+title Calculator- butter OS
 ECHO Calculator Version 1.5
 echo.
 ECHO * = Multiply
