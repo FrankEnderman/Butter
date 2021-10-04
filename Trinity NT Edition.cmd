@@ -302,14 +302,14 @@ if %direct% == 3 goto menu
 :: logging 
 echo .EnterUsefulMenu(%time%) >> Logs.inf
 :: some other menu
-echo 1.Calc 2.Text Editor 3.ASCII Paintings 4.Help 5.Huh 6.Additional 7.Story 8.Personalize
+echo 1.Calc 2.Text Editor 3.ASCII Paintings 4.Help 5.Huh 6.Additional 7.Songs 8.Personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto ASCIIPaintings
 if %OPTI% == 4 goto help
 if %OPTI% == 6 goto additional
-if %OPTI% == 7 goto story
+if %OPTI% == 7 goto music
 if %input% == 8 goto textColor
 :additional
 cls
@@ -512,3 +512,8 @@ echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.
 echo congrats! Setup has completed. NOTE: ANY FILES FROM THE INSTALL SHOULD NOT BE DELETED FROM YOUR COMPUTER
 pause
 goto boot 
+:music
+cls
+echo shhhh.... don't leak my hard work (not complete tho)
+pause 
+goto menu2
