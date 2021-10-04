@@ -9,7 +9,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1947
+title Butter Trinity Winter 1.5 Build 7750
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Logs.inf
 :boot
@@ -175,7 +175,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1947
+echo     VERSION = Winter 1.5 B7750
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -302,11 +302,11 @@ if %direct% == 3 goto menu
 :: logging 
 echo .EnterUsefulMenu(%time%) >> Logs.inf
 :: some other menu
-echo 1.Calc 2.Text Editor 3.ASCII Paintings 4.Help 5.Huh 6.Additional 7.Songs 8.Personalize
+echo 1.Calc 2.Text Editor 3.How to Give Feedback 4.Help 5.Huh 6.Additional 7.Songs 8.Personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
-if %OPTI% == 3 goto ASCIIPaintings
+if %OPTI% == 3 goto giveFeedback
 if %OPTI% == 4 goto help
 if %OPTI% == 6 goto additional
 if %OPTI% == 7 goto music
@@ -336,8 +336,13 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1947
-echo KERNEL: Trinity NT 1.1
+echo version: 1.5 Build 7750
+echo KERNEL: Trinity NT 1.2
+echo ========================
+echo software type: 
+echo system usability tool
+echo (according to CVE)
+echo ========================
 pause
 goto menu
 :ctrlPanel
@@ -516,4 +521,12 @@ goto boot
 cls
 echo shhhh.... don't leak my hard work (not complete tho)
 pause 
+goto menu2
+:giveFeedback
+cls
+echo Bug Reps:
+echo go to github issues and add it there
+echo features:
+echo also in github
+pause
 goto menu2
