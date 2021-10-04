@@ -155,13 +155,6 @@ if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto OSInfo
-:adminTools
-cls
-:: admin tools for... admins
-echo .AdminToolsOpened(%time%) >> Logs.inf
-echo 1.kill your computer 
-set GHS= select:
-if %GHS% == 1 goto brokenMode
 
 :info
 echo .OpenSysInfo(%time%) >> Logs.inf
@@ -258,10 +251,7 @@ goto menu
 :Help
 :: help feature
 cls
-echo Text editor is a program made for creating text documents
-echo Calculator lets you process math problems
-echo BrokenMode is for breaking your computer (DANGEROUS)
-echo here is a random number %random% :D
+type inst.txt
 pause
 goto menu
 :powerOptions
@@ -341,8 +331,9 @@ echo KERNEL: Trinity NT 1.2
 echo ========================
 echo software type: 
 echo system usability tool
-echo (according to CVE)
+echo (according to CVE) :D
 echo ========================
+echo first commenter: naum
 pause
 goto menu
 :ctrlPanel
@@ -532,3 +523,10 @@ echo also in github
 echo NOTE: IF YOU ARE ON A BETA BUILD, PLEASE DO NOT LEAK MY HARD WORK.
 pause
 goto menu2
+:adminTools
+cls
+:: admin tools for... admins
+echo .AdminToolsOpened(%time%) >> Logs.inf
+echo 1.kill your computer 
+set GHS= select:
+if %GHS% == 1 goto brokenMode
