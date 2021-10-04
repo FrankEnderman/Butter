@@ -529,5 +529,6 @@ echo Bug Reps:
 echo go to github issues and add it there
 echo features:
 echo also in github
+echo NOTE: IF YOU ARE ON A BETA BUILD, PLEASE DO NOT LEAK MY HARD WORK.
 pause
 goto menu2
