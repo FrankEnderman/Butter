@@ -9,7 +9,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 1946
+title Butter Trinity Winter 1.5 Build 1947
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Logs.inf
 :boot
@@ -175,7 +175,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B1946
+echo     VERSION = Winter 1.5 B1947
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -336,7 +336,7 @@ cls
 echo ========================
 echo         BUTTER OS
 echo ========================
-echo version: 1.5 Build 1946
+echo version: 1.5 Build 1947
 echo KERNEL: Trinity NT 1.1
 pause
 goto menu
