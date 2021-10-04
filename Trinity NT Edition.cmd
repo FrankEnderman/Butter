@@ -232,7 +232,7 @@ goto menu
 :calc
 cls
 title Calculator- butter OS
-ECHO Calculator Version 1.5
+ECHO Calculator Version 1.6
 echo.
 ECHO * = Multiply
 ECHO + = Add
@@ -249,7 +249,7 @@ goto menu
 :TEXT
 echo .EnterTextEditor(%time%) >> Logs.inf
 cls
-echo TEXT EDITOR 1.3
+echo Text Editor 1.4
 set /p N= document name: 
 cls
 set /p WRITE=Write:
