@@ -420,6 +420,7 @@ echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 3 /NOBREAK >nul
+echo note: i typed ALL of this mess
 pause
 goto menu
 :brokenMode
@@ -436,7 +437,7 @@ echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%ra
 timeout /T 3 /NOBREAK >nul
 echo DRIVE CORRUPT
 timeout /T 1 /NOBREAK >nul
-echo DID YOU CRASH IT INTENTIONALLY?!?!??!?!?!??!?
+echo nevermind. your computer will be okay :D (hopefully) :
 timeout /T 5 /NOBREAK >nul
 echo please wait......
 timeout /T 7 /NOBREAK >nul
