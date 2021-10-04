@@ -287,14 +287,14 @@ if %input% == 4 goto browse
 :settings
 cls
 echo 1.Return to Menu 
-echo set the time:
-set /p OPT= new time
+echo Set the time:
+set /p OPT= New time
 set %time% == %OPT%
 if %OPT% == 1 goto menu
 :datesMenu
 cls
-echo 1.calendar 2.time 3.menu
-set /p direct= select:
+echo 1.Calendar 2.Time 3.Menu
+set /p direct= Select:
 if %direct% == 1 goto cal
 if %direct% == 2 goto clock
 if %direct% == 3 goto menu
@@ -302,7 +302,7 @@ if %direct% == 3 goto menu
 :: logging 
 echo .EnterUsefulMenu(%time%) >> Logs.inf
 :: some other menu
-echo 1.calc 2.text editor 3.ASCII paintings 4.help 5.huh 6.additional 7.story 8.personalize
+echo 1.Calc 2.Text Editor 3.ASCII Paintings 4.Help 5.Huh 6.Additional 7.Story 8.Personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
