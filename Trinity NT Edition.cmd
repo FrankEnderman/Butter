@@ -107,7 +107,6 @@ echo .BootComplete(%time%) >> Logs.inf
 echo enter your account name
 cls 
 set/p name= enter name:
-if %name% == null set %name% == %username%
 echo.
 set country= type country code
 echo.
@@ -251,9 +250,11 @@ goto menu
 :Help
 :: help feature
 cls
-type inst.txt
+echo Calculator is for calculating numbers.
+echo Text Edit edits files.
 pause
 goto menu
+
 :powerOptions
 cls
 echo .EnteredPowerOptions >> Logs.inf
@@ -301,19 +302,7 @@ if %OPTI% == 4 goto help
 if %OPTI% == 6 goto additional
 if %OPTI% == 7 goto music
 if %input% == 8 goto textColor
-:additional
-cls
-echo 1.are ya a idiot
-set SD= pick:
-if %SD% == 1 goto areyouaidiot
-:winterGift
-:: some deprecated feature (will remove in SP 1)
-cls
-echo here is the changes:
-echo 1.changed the text color
-echo 2.made some cool changes
-pause
-goto menu2
+
 :UAC
 :: user account control
 cls
