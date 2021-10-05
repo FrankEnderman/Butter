@@ -9,7 +9,7 @@
  :: sets color to white
 color 7
 :: sets title
-title Butter Trinity Winter 1.5 Build 7750
+title Butter SUT Winter 1.5 Build 7750
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] {Build:7750} >> Logs.inf
 :boot
@@ -97,7 +97,7 @@ echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 timeout /T 2 /NOBREAK >nul
 echo finding kernel.......
 timeout /T 1 /NOBREAK >nul
-echo Booting Butter Trinity ... 
+echo Booting Butter SUT ... 
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
@@ -131,7 +131,7 @@ echo.
 :: shows current time/date
 ECHO current time: %time% date: %date% name: %name% 
 :: control points
-set /p input= choose:
+set /p input= choSUTe:
 if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
@@ -144,7 +144,7 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.OS info 
+echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.SUT info 
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -153,13 +153,13 @@ if %FHSK% == 3 goto info
 if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
-if %FHSK% == 7 goto OSInfo
+if %FHSK% == 7 goto SUTInfo
 
 :info
 echo .OpenSysInfo(%time%) >> Logs.inf
 echo.==============================
 timeout /T 1 /NOBREAK >nul
-echo     Butter Trinity OS
+echo     Butter SUT 
 timeout /T 1 /NOBREAK >nul
 echo.==============================
 timeout /T 1 /NOBREAK >nul
@@ -206,6 +206,7 @@ echo  time: %time%
 timeout /T 1 /NOBREAK >nul
 echo.
 echo  date: %date%
+echo SUT: sys usability tool
 echo.==============================
 echo            The End
 echo.==============================
@@ -223,7 +224,7 @@ pause
 goto menu
 :calc
 cls
-title Calculator- butter OS
+title Calculator- butter SUT
 ECHO Calculator Version 1.6
 echo.
 ECHO * = Multiply
@@ -310,13 +311,13 @@ echo do you want to let Text Editor to change your files?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
-:OSInfo
+:SUTInfo
 cls
 echo ========================
-echo         BUTTER OS
+echo         BUTTER SUT
 echo ========================
 echo version: 1.5 Build 7750
-echo KERNEL: Trinity NT 1.2
+echo KERNEL: SUT NT 1.2
 echo ========================
 echo software type: 
 echo system usability tool
@@ -427,7 +428,7 @@ cls
 timeout /T 3 /NOBREAK >nul
 echo restarting....
 timeout /T 2 /NOBREAK >nul
-echo BOOTING INTO TRINITY RRBI
+echo BOOTING INTO SUT RRBI
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
