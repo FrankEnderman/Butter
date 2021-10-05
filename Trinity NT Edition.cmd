@@ -11,7 +11,7 @@ color 7
 :: sets title
 title Butter Trinity Winter 1.5 Build 7750
 :: adds boot info to Logs.inf file
-echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] >> Logs.inf
+echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] {Build:7750} >> Logs.inf
 :boot
 :: clears messages on boot
 cls
