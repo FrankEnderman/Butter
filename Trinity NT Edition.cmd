@@ -292,7 +292,7 @@ if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :menu2
 :: logging 
-echo .EnterUsefulMenu(%time%) >> Logs.inf
+echo .EnterToolMenu(%time%) >> Logs.inf
 :: some other menu
 echo 1.Calc 2.Text Editor 3.How to Give Feedback 4.Help 5.Huh 6.Additional 7.Songs 8.Personalize
 set /p OPTI= select option:
@@ -317,7 +317,7 @@ echo ========================
 echo         BUTTER SUT
 echo ========================
 echo version: 1.5 Build 7750
-echo KERNEL: SUT NT 1.2
+echo KERNEL: SUT NT 1.3
 echo ========================
 echo software type: 
 echo system usability tool
