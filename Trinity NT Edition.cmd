@@ -172,64 +172,6 @@ if %FHSK% == 4 goto menu2
 if %FHSK% == 5 goto gamesMenu
 if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto SUTInfo
-
-:info
-echo .OpenSysInfo(%time%) >> Logs.inf
-echo.==============================
-timeout /T 1 /NOBREAK >nul
-echo     Butter SUT 
-timeout /T 1 /NOBREAK >nul
-echo.==============================
-timeout /T 1 /NOBREAK >nul
-echo     DETAILS  
-timeout /T 1 /NOBREAK >nul
-echo.
-timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B8192
-timeout /T 1 /NOBREAK >nul
-echo.     
-timeout /T 1 /NOBREAK >nul
-echo     RAM = 1GB
-timeout /T 1 /NOBREAK >nul
-echo.
-echo     CORE = %random%
-echo.
-timeout /T 1 /NOBREAK >nul
-echo     HARD_DRIVE = 250GB     
-echo.   
-timeout /T 1 /NOBREAK >nul
-echo     Kernel ver = 5.9.8
-timeout /T 1 /NOBREAK >nul
-echo.  
-echo    Build = 3
-echo.
-timeout /T 1 /NOBREAK >nul
-echo.==============================
-timeout /T 2 /NOBREAK >nul
-echo  @Copyright Interstar.inc 
-timeout /T 2 /NOBREAK >nul
-echo.
-echo  GPL Public Liscense 3.0
-timeout /T 2 /NOBREAK >nul
-echo.==============================
-timeout /T 2 /NOBREAK >nul
-echo     account
-timeout /T 1 /NOBREAK >nul
-echo.
-echo  name: %name%
-timeout /T 1 /NOBREAK >nul
-echo.
-timeout /T 1 /NOBREAK >nul
-echo  time: %time%
-timeout /T 1 /NOBREAK >nul
-echo.
-echo  date: %date%
-echo SUT: sys usability tool
-echo.==============================
-echo            The End
-echo.==============================
-pause
-goto menu
 :clock 
 cls
 ECHO %time%
@@ -487,6 +429,7 @@ pause
 goto menu
 :butterDeploy
 :: login/setup interface
+cls
 pause
 echo .
 echo .LoadingStart(%time%) >> Logs.inf
@@ -558,3 +501,60 @@ cls
 echo 0xMEME :D :( :C 
 pause
 goto adminTools
+:info
+echo .OpenSysInfo(%time%) >> Logs.inf
+echo.==============================
+timeout /T 1 /NOBREAK >nul
+echo     Butter SUT 
+timeout /T 1 /NOBREAK >nul
+echo.==============================
+timeout /T 1 /NOBREAK >nul
+echo     DETAILS  
+timeout /T 1 /NOBREAK >nul
+echo.
+timeout /T 1 /NOBREAK >nul
+echo     VERSION = Winter 1.5 B8192
+timeout /T 1 /NOBREAK >nul
+echo.     
+timeout /T 1 /NOBREAK >nul
+echo     RAM = 1GB
+timeout /T 1 /NOBREAK >nul
+echo.
+echo     CORE = %random%
+echo.
+timeout /T 1 /NOBREAK >nul
+echo     HARD_DRIVE = 250GB     
+echo.   
+timeout /T 1 /NOBREAK >nul
+echo     Kernel ver = 5.9.8
+timeout /T 1 /NOBREAK >nul
+echo.  
+echo    Build = 3
+echo.
+timeout /T 1 /NOBREAK >nul
+echo.==============================
+timeout /T 2 /NOBREAK >nul
+echo  @Copyright Interstar.inc 
+timeout /T 2 /NOBREAK >nul
+echo.
+echo  GPL Public Liscense 3.0
+timeout /T 2 /NOBREAK >nul
+echo.==============================
+timeout /T 2 /NOBREAK >nul
+echo     account
+timeout /T 1 /NOBREAK >nul
+echo.
+echo  name: %name%
+timeout /T 1 /NOBREAK >nul
+echo.
+timeout /T 1 /NOBREAK >nul
+echo  time: %time%
+timeout /T 1 /NOBREAK >nul
+echo.
+echo  date: %date%
+echo SUT: sys usability tool
+echo.==============================
+echo            The End
+echo.==============================
+pause
+goto menu
