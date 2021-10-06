@@ -522,6 +522,7 @@ set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto crazyError
 :crazyError
+echo .EnterCrazyError(%time%)
 cls
 echo %random%
 echo yhuhdeyueyeeyyeyeukiwhwsbsb6
