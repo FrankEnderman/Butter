@@ -531,6 +531,6 @@ pause
 goto adminTools
 :weird
 cls
-echo this is NOT finished. check back later
+echo 0xMEME :D :( :C 
 pause
 goto adminTools
