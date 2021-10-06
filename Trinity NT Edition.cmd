@@ -436,7 +436,7 @@ function CRASH_HANDLER (
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
-echo Oh! we are taking you to the boot screen because you initiated a crash :) and we saved all your crash info to a file.
+echo we are restarting your computer. Please kick back and wait
 timeout /T 2 /NOBREAK >nul
 goto boot
 :textColor
