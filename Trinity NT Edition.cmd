@@ -11,7 +11,7 @@ color 7
 :: sets title
 title Butter SUT Winter 1.5 Build 7750
 :: adds boot info to Logs.inf file
-echo Boot.%random%.%time%(%date%) [PCName: %USERNAME%] {Build:7750} >> Logs.inf
+echo Boot.%random%.%time%(%date%) {Build:7750} >> Logs.inf
 :boot
 :: clears messages on boot
 cls
@@ -527,6 +527,7 @@ echo .EnterCrazyError(%time%)
 cls
 echo %random%
 echo yhuhdeyueyeeyyeyeukiwhwsbsb6
+echo 0xJSJJJJ010101010101111023773626255242572282
 pause
 goto adminTools
 :weird
