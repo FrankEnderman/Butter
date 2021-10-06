@@ -517,14 +517,20 @@ goto menu2
 cls
 :: admin tools for... admins
 echo .AdminToolsOpened(%time%) >> Logs.inf
-echo 1.kill your computer 2.crazy error
+echo 1.kill your computer 2.crazy error 3.weird
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto crazyError
+if %GHS% == 3 goto weird
 :crazyError
 echo .EnterCrazyError(%time%)
 cls
 echo %random%
 echo yhuhdeyueyeeyyeyeukiwhwsbsb6
+pause
+goto adminTools
+:weird
+cls
+echo this is NOT finished. check back later
 pause
 goto adminTools
