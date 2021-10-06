@@ -9,7 +9,7 @@
  :: sets color to white
 color F
 :: sets title
-title Butter SUT Winter 1.5 Build 4096
+title Butter SUT Winter 1.5 Build 8192
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) {Build:7750} >> Logs.inf
 :boot
@@ -106,6 +106,7 @@ echo .BootComplete(%time%) >> Logs.inf
 :: login (no password inc.)
 echo enter your account name
 cls 
+echo NOTE: never put spaces in names
 set/p name= enter name:
 echo.
 set country= type country code
@@ -126,12 +127,23 @@ echo .MenuEntry(%time%) >> Logs.inf
 echo What Would You Like To Do? Type the number
 echo.
 :: shows options
-echo 1.Butter in a box! (FOR NEW USERS!) 2.useful tools menu 3.dates menu 4.change text color to green 5.TimeSetter 6.edit data 7.accessories 8.exit
+echo 1.Butter in a box! (FOR NEW USERS!) 
+echo 2.Useful tools menu 
+echo 3.Dates menu 
+echo 4.Change text color to green 
+echo 5.Time setter
+echo 6.Edit data
+echo 7.Accessories
+echo 8.Exit
 echo.
 :: shows current time/date
-ECHO current time: %time% date: %date% name: %name% 
+echo time and dates:
+ECHO current time: %time%
+echo date: %date%
+echo name: %name% 
 :: control points
-set /p input= choSUTe:
+echo.
+set /p input= choose:
 if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
@@ -144,7 +156,13 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
-echo 1.change text color 2.controls 3.System Info 4.useful tools 5.games 6.admin tools (DANGER) 7.SUT info 
+echo 1.change text color
+echo 2.controls
+echo 3.System Info
+echo 4.useful tools
+echo 5.games
+echo 6.admin tools (DANGER)
+echo 7.SUT info 
 echo.
 set FHSK= option:
 if %FHSK% == 1 goto textColor
@@ -167,7 +185,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B4096
+echo     VERSION = Winter 1.5 B8192
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -260,7 +278,9 @@ goto menu
 cls
 echo .EnteredPowerOptions >> Logs.inf
 :: power options
-echo 1.Reboot 2.Boot into windows 3.Return to menu 
+echo 1.Reboot
+echo 2.Boot into windows
+echo 3.Return to menu 
 :: number inputs
 set /p input=
 if %input% == 1 goto boot
@@ -270,7 +290,10 @@ if %input% == 3 goto menu
 :: logging
 echo .EnterProductivity >> Logs.inf
 :: productivity tools
-echo 1.Notes 2.Calculator 3.Menu 4.Browse the Internet
+echo 1.Notes
+echo 2.Calculator
+echo 3.Menu
+echo 4.Browse the Internet
 set /p input= select:
 if %input% == 1 goto TEXT
 if %input% == 2 goto calc
@@ -316,7 +339,7 @@ cls
 echo ========================
 echo         BUTTER SUT
 echo ========================
-echo version: 1.5 Build 4096
+echo version: 1.5 Build 8192
 echo KERNEL: SUT NT 1.3
 echo ========================
 echo software type: 
@@ -496,7 +519,7 @@ timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
 echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.inf
-echo successfully downloaded build 4096
+echo successfully downloaded build 8192
 pause
 goto boot 
 :music
