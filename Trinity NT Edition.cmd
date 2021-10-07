@@ -190,7 +190,7 @@ title Calculator- butter SUT
 ECHO Calculator Version 1.6
 echo.
 ECHO * = Multiply
-ECHO + = Add
+ECHO + = Plus
 ECHO - = Minus
 ECHO / = Divide
 echo % = Even 
@@ -570,7 +570,9 @@ echo.==============================
 pause
 goto menu
 :readData
-set filePath122= path of item:
+cls
+set /p filePath122= path of item:
+echo.
 type %filePath122%
 pause 
 goto menu
