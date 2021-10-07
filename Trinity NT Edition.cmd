@@ -131,7 +131,7 @@ echo 1.Butter in a box! (FOR NEW USERS!)
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
-echo 5.Time setter
+echo 5.Read data
 echo 6.Edit data
 echo 7.Accessories
 echo 8.Exit
@@ -148,7 +148,7 @@ if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
-if %input% == 5 goto timeSetter
+if %input% == 5 goto readData
 if %input% == 6 goto savesomething
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
@@ -156,6 +156,8 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
+echo type the number:
+echo.
 echo 1.change text color
 echo 2.controls
 echo 3.System Info
@@ -490,7 +492,9 @@ goto menu2
 cls
 :: admin tools for... admins
 echo .AdminToolsOpened(%time%) >> Logs.inf
-echo 1.kill your computer 2.crazy error 3.weird
+echo 1.kill your computer
+echo 2.crazy error
+echo 3.weird
 set GHS= select:
 if %GHS% == 1 goto brokenMode
 if %GHS% == 2 goto crazyError
@@ -564,4 +568,9 @@ echo.==============================
 echo            The End
 echo.==============================
 pause
+goto menu
+:readData
+set filePath122= path of item:
+type %filePath122%
+pause 
 goto menu
