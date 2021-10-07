@@ -250,7 +250,9 @@ set %time% == %OPT%
 if %OPT% == 1 goto menu
 :datesMenu
 cls
-echo 1.Calendar 2.Time 3.Menu
+echo 1.Calendar
+echo 2.Time
+echo 3.Menu
 set /p direct= Select:
 if %direct% == 1 goto cal
 if %direct% == 2 goto clock
