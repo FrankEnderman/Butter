@@ -412,7 +412,9 @@ goto boot
 :textColor
 :: set the text color
 cls
-echo 1.green 2.white 3.gray
+echo 1.green
+echo 2.white
+echo 3.gray
 set txtColor= pick:
 if %txtColor% == 1 goto setGreen
 if %txtColor% == 2 goto setWhite
