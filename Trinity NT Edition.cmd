@@ -7,7 +7,7 @@
 :: turns echo off (hides the code)
  @echo off
  :: sets color to white
-color F
+color 03
 :: sets title
 title Butter SUT Winter 1.5 Build 16384
 :: adds boot info to Logs.inf file
