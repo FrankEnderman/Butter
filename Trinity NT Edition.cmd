@@ -480,7 +480,7 @@ timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
 echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.inf
-echo successfully downloaded build 8192
+echo successfully downloaded Butter! :D
 pause
 goto boot 
 :music
