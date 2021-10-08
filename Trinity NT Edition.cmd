@@ -131,8 +131,8 @@ echo 1.Butter in a box! (FOR NEW USERS!)
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
-echo 5.shutdown
-echo 6.Edit data
+echo 5.Shutdown
+echo 6.Restart
 echo 7.Accessories
 echo 8.Exit
 echo.
@@ -149,7 +149,7 @@ if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto shutdown
-if %input% == 6 goto savesomething
+if %input% == 6 goto restart
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
@@ -589,5 +589,8 @@ type %filePath122%
 pause
 goto menu
 :shutdown
+pause
+shutdown /S
+:restart
 pause
 shutdown /R
