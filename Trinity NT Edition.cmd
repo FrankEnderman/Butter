@@ -156,7 +156,7 @@ if %input% == 8 exit
 :accessories
 echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
-echo type the number:
+echo What Would You Like To Do? Type the number
 echo.
 echo 1.change text color
 echo 2.controls
@@ -222,6 +222,7 @@ goto menu
 cls
 echo .EnteredPowerOptions >> Logs.inf
 :: power options
+echo What Would You Like To Do? Type the number
 echo 1.Reboot
 echo 2.Boot into windows
 echo 3.Return to menu 
@@ -263,7 +264,15 @@ if %direct% == 3 goto menu
 :: logging 
 echo .EnterToolMenu(%time%) >> Logs.inf
 :: some other menu
-echo 1.Calc 2.Text Editor 3.How to Give Feedback 4.Help 5.Huh 6.Additional 7.Songs 8.Personalize
+echo 1.Calc
+echo 2.Text Editor
+echo 3.How to Give
+echo Feedback
+echo 4.Help
+echo 5.Huh
+echo 6.Additional
+echo 7.Songs
+echo 8.Personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
 if %OPTI% == 2 goto UAC
@@ -574,5 +583,5 @@ cls
 set /p filePath122= path of item:
 echo.
 type %filePath122%
-pause 
+pause
 goto menu
