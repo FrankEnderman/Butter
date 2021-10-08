@@ -131,7 +131,7 @@ echo 1.Butter in a box! (FOR NEW USERS!)
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
-echo 5.Read data
+echo 5.shutdown
 echo 6.Edit data
 echo 7.Accessories
 echo 8.Exit
@@ -148,7 +148,7 @@ if %input% == 1 goto butterDeploy
 if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
-if %input% == 5 goto readData
+if %input% == 5 goto shutdown
 if %input% == 6 goto savesomething
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
@@ -227,11 +227,13 @@ echo What Would You Like To Do? Type the number
 echo 1.Reboot
 echo 2.Boot into windows
 echo 3.Return to menu 
+echo 4.shutdown
 :: number inputs
 set /p input=
 if %input% == 1 goto boot
 if %input% == 2 exit
 if %input% == 3 goto menu
+if %input% == 4 shutdown /s
 :productivity
 :: logging
 echo .EnterProductivity >> Logs.inf
@@ -586,3 +588,6 @@ echo.
 type %filePath122%
 pause
 goto menu
+:shutdown
+pause
+shutdown /R
