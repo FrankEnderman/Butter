@@ -134,7 +134,7 @@ echo 4.Change text color to green
 echo 5.Shutdown
 echo 6.Restart
 echo 7.Accessories
-echo 8.Exit
+echo 8.Log off
 echo.
 :: shows current time/date
 echo time and dates:
@@ -152,7 +152,7 @@ if %input% == 5 goto shutdown
 if %input% == 6 goto restart
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
-if %input% == 8 exit
+if %input% == 8 logoff
 :accessories
 :: accessories (it has a bug. trying to solve)
 echo .AccessoryOpened (%time%) >> Logs.inf 
@@ -594,3 +594,6 @@ shutdown /S
 :restart
 pause
 shutdown /R
+:logoff
+pause
+shutdown /L
