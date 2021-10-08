@@ -9,7 +9,7 @@
  :: sets color to white
 color F
 :: sets title
-title Butter SUT Winter 1.5 Build 8192
+title Butter SUT Winter 1.5 Build 16384
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) {Build:7750} >> Logs.inf
 :boot
@@ -106,7 +106,7 @@ echo .BootComplete(%time%) >> Logs.inf
 :: login (no password inc.)
 echo enter your account name
 cls 
-echo NOTE: never put spaces in names
+echo type your full name or short name 
 set/p name= enter name:
 echo.
 set country= type country code
@@ -154,6 +154,7 @@ if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 exit
 :accessories
+:: accessories (it has a bug. trying to solve)
 echo .AccessoryOpened (%time%) >> Logs.inf 
 cls
 echo What Would You Like To Do? Type the number
@@ -294,7 +295,7 @@ cls
 echo ========================
 echo         BUTTER SUT
 echo ========================
-echo version: 1.5 Build 8192
+echo version: 1.5 Build 16384
 echo KERNEL: SUT NT 1.3
 echo ========================
 echo software type: 
@@ -533,7 +534,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B8192
+echo     VERSION = Winter 1.5 B16384
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
