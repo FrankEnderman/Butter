@@ -152,7 +152,7 @@ if %input% == 5 goto shutdown
 if %input% == 6 goto restart
 if %input% == 7 goto accessories
 if %input% == 9 goto COMMANDNOTFOUND
-if %input% == 8 logoff
+if %input% == 8 goto logoff
 :accessories
 :: accessories (it has a bug. trying to solve)
 echo .AccessoryOpened (%time%) >> Logs.inf 
