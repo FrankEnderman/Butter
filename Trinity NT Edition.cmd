@@ -400,7 +400,7 @@ echo %random%%random%%random%%random%%random%%random%%random%
 timeout /T 4 /NOBREAK >nul
 echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
 timeout /T 3 /NOBREAK >nul
-echo BROKEN MODE: ON
+echo BROKEN! haha
 timeout /T 1 /NOBREAK >nul
 echo nevermind. your computer will be okay :D (hopefully) :
 timeout /T 5 /NOBREAK >nul
