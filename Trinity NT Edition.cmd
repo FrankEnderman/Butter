@@ -133,7 +133,7 @@ echo 3.Dates menu
 echo 4.Change text color to green 
 echo 5.Shutdown
 echo 6.Restart
-echo 7.Accessories
+echo 7.Add users
 echo 8.Log off
 echo.
 :: shows current time/date
@@ -150,7 +150,7 @@ if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto shutdown
 if %input% == 6 goto restart
-if %input% == 7 goto accessories
+if %input% == 7 goto addUser
 if %input% == 9 goto COMMANDNOTFOUND
 if %input% == 8 goto logoff
 :accessories
@@ -274,7 +274,7 @@ echo Feedback
 echo 4.Help
 echo 5.Huh
 echo 6.Additional
-echo 7.Songs
+echo 7.Accessories
 echo 8.Personalize
 set /p OPTI= select option:
 if %OPTI% == 1 goto calc
@@ -282,7 +282,7 @@ if %OPTI% == 2 goto UAC
 if %OPTI% == 3 goto giveFeedback
 if %OPTI% == 4 goto help
 if %OPTI% == 6 goto additional
-if %OPTI% == 7 goto music
+if %OPTI% == 7 goto accessories
 if %input% == 8 goto textColor
 
 :UAC
@@ -597,3 +597,7 @@ shutdown /R
 :logoff
 pause
 shutdown /L
+:addUser
+net user test /add
+pause
+goto menu
