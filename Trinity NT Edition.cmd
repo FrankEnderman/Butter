@@ -420,7 +420,7 @@ function CRASH_HANDLER (
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
-echo we are restarting your computer. Please kick back and wait
+echo since your computer crashed, we would restart it. Please NEVER mess stuff up
 timeout /T 2 /NOBREAK >nul
 goto boot
 :textColor
@@ -589,15 +589,12 @@ type %filePath122%
 pause
 goto menu
 :shutdown
-pause
 shutdown /S
 :restart
-pause
 shutdown /R
 :logoff
-pause
 shutdown /L
 :addUser
-net user test /add
+net user user /add
 pause
 goto menu
