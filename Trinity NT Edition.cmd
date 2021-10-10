@@ -224,6 +224,7 @@ cls
 echo .EnteredPowerOptions >> Logs.inf
 :: power options
 echo What Would You Like To Do? Type the number
+echo.
 echo 1.Reboot
 echo 2.Boot into windows
 echo 3.Return to menu 
@@ -241,7 +242,7 @@ echo .EnterProductivity >> Logs.inf
 echo 1.Notes
 echo 2.Calculator
 echo 3.Menu
-echo 4.Browse the Internet
+echo 4.Browse the Internet (deprecated)
 set /p input= select:
 if %input% == 1 goto TEXT
 if %input% == 2 goto calc
@@ -412,7 +413,7 @@ cls
 timeout /T 3 /NOBREAK >nul
 echo restarting....
 timeout /T 2 /NOBREAK >nul
-echo BOOTING INTO SUT RRBI
+echo are you okay?
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
