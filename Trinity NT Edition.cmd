@@ -9,9 +9,9 @@
  :: sets color to white
 color 03
 :: sets title
-title Butter SUT Winter 1.5 Build 16384
+title Butter SUT Winter 1.6 Beta 1
 :: adds boot info to Logs.inf file
-echo Boot.%random%.%time%(%date%) {Build:7750} >> Logs.inf
+echo Boot.%random%.%time%(%date%) {Build:1.6 B1} >> Logs.inf
 :boot
 :: clears messages on boot
 cls
