@@ -597,4 +597,4 @@ shutdown /L
 :addUser
 net user user /add
 pause
-goto menu
+shutdown /R
