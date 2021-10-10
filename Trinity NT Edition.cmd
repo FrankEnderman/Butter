@@ -9,7 +9,7 @@
  :: sets color to white
 color 03
 :: sets title
-title Butter SUT Winter 1.6 Beta 1
+title Butter SUT Winter 1.6 Beta 2
 :: adds boot info to Logs.inf file
 echo Boot.%random%.%time%(%date%) {Build:1.6 B1} >> Logs.inf
 :boot
@@ -127,7 +127,7 @@ echo .MenuEntry(%time%) >> Logs.inf
 echo What Would You Like To Do? Type the number
 echo.
 :: shows options
-echo 1.Butter in a box! (FOR NEW USERS!) 
+echo 1.Butter Setup (FOR NEW USERS!) 
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
@@ -422,7 +422,7 @@ function CRASH_HANDLER (
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
 echo since your computer crashed, we would restart it. Please NEVER mess stuff up
-timeout /T 2 /NOBREAK >nul
+timeout /T 1 /NOBREAK >nul
 goto boot
 :textColor
 :: set the text color
