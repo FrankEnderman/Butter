@@ -652,3 +652,8 @@ shutdown /L
 net user user /add
 pause
 shutdown /R
+:crash
+cls
+echo Invalid command.
+pause
+goto menu
