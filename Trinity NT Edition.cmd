@@ -211,6 +211,8 @@ set /p N= document name:
 cls
 set /p WRITE=Write:
 echo %WRITE% >> %N%.txt
+echo your document was created.
+pause
 goto menu
 :Help
 :: help feature
