@@ -189,7 +189,7 @@ goto menu
 :calc
 cls
 title Calculator- butter SUT
-ECHO Calculator Version 1.6
+ECHO Calculator Version 1.7
 echo.
 ECHO * = Multiply
 ECHO + = Plus
@@ -206,7 +206,7 @@ goto menu
 :TEXT
 echo .EnterTextEditor(%time%) >> Logs.inf
 cls
-echo Text Editor 1.4
+echo Text Editor 1.5
 set /p N= document name: 
 cls
 set /p WRITE=Write:
