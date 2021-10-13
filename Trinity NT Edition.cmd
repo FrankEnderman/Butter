@@ -133,7 +133,7 @@ echo 3.Dates menu
 echo 4.Change text color to green 
 echo 5.Shutdown
 echo 6.Restart
-echo 7.Add users
+echo 7.Exit
 echo 8.Log off
 echo 9.calculator
 echo.
@@ -151,7 +151,7 @@ if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto shutdown
 if %input% == 6 goto restart
-if %input% == 7 goto addUser
+if %input% == 7 exit
 if %input% == 9 goto calc
 if %input% == 8 goto logoff
 :accessories
@@ -648,10 +648,6 @@ shutdown /S
 shutdown /R
 :logoff
 shutdown /L
-:addUser
-net user user /add
-pause
-shutdown /R
 :crash
 cls
 echo Invalid command.
