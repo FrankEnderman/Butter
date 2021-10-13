@@ -207,7 +207,7 @@ goto menu
 echo .EnterTextEditor(%time%) >> Logs.inf
 cls
 echo Text Editor 1.5
-set /p N= document name: 
+set /p N= name of TXT file: 
 cls
 set /p WRITE=Write:
 echo %WRITE% >> %N%.txt
