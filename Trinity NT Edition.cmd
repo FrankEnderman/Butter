@@ -7,11 +7,11 @@
 :: turns echo off (hides the code)
  @echo off
  :: sets color to white
-color 03
+color 06
 :: sets title
 title Butter SUT Winter 1.6 Beta 3
 :: adds boot info to Logs.inf file
-echo Boot.%random%.%time%(%date%) {Build:1.6 B1} >> Logs.inf
+echo Boot.%random%.%time%(%date%) {Build:1.6 B3} >> Logs.inf
 :boot
 :: clears messages on boot
 cls
