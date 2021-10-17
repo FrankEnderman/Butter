@@ -134,7 +134,7 @@ echo 4.Change text color to green
 echo 5.Shutdown
 echo 6.Restart
 echo 7.Exit
-echo 8.Send feedback
+echo 8.Antivirus
 echo 9.calculator
 echo.
 :: shows current time/date
@@ -153,7 +153,7 @@ if %input% == 5 goto shutdown
 if %input% == 6 goto restart
 if %input% == 7 exit
 if %input% == 9 goto calc
-if %input% == 8 start msedge https://forms.gle/gq9RvP27b7ixXuKYA
+if %input% == 8 goto MAIN
 :accessories
 :: accessories (it has a bug. trying to solve)
 echo .AccessoryOpened (%time%) >> Logs.inf 
@@ -653,3 +653,30 @@ cls
 echo Invalid command.
 pause
 goto menu
+:MAIN
+title Common Sense AV- Butter SUT
+cls
+echo 1.Security 2.about
+set /p sel= select:
+if %sel% == 1 goto security
+if %sel% == 2 goto about
+
+:security
+cls
+echo DO NOT download .exe, .bat or .vbs files from da internet
+echo NEVER delete system 32
+echo DO NOT visit sketchy sites
+echo turn off JavaScript
+echo trust me you wont get a virus
+pause
+goto MAIN
+:about
+cls
+echo Common Sense protects you from:
+echo 1. Ransomware
+echo 2. Enderware
+echo 3. Viruses
+echo 4. Worms
+echo 5. Spyware
+pause
+goto MAIN
