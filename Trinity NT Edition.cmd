@@ -537,15 +537,11 @@ timeout /T 1 /NOBREAK >nul
 echo .......................O
 timeout /T 1 /NOBREAK >nul
 echo ........................
-echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.TLF
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username% VER: %ver%) >> Logs.TLF
 echo successfully downloaded Butter %ver%! :D
 pause
 goto boot 
-:music
-cls
-echo shhhh.... don't leak my hard work (not complete tho)
-pause 
-goto menu2
+
 :giveFeedback
 cls
 echo Bug Reps:
