@@ -10,8 +10,8 @@
 color 06
 :: sets title
 title Butter SUT Winter 1.6 Beta 3
-:: adds boot info to Logs.inf file
-echo Boot.%random%.%time%(%date%) {Build:1.6 B3} >> Logs.inf
+:: adds boot info to Logs.TLF file
+echo Boot.%random%.%time%(%date%) {Build:1.6 B3} >> Logs.TLF
 :boot
 :: clears messages on boot
 cls
@@ -102,7 +102,7 @@ timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
 :: logs boot complete event
-echo .BootComplete(%time%) >> Logs.inf
+echo .BootComplete(%time%) >> Logs.TLF
 :: login (no password inc.)
 echo enter your account name
 cls 
@@ -113,16 +113,16 @@ set country= type country code
 echo.
 echo Hello! %name% it is %time% now.
 echo.
-echo .LOGON_SUCCESS(1) [%name%].%time% >> Logs.inf
+echo .LOGON_SUCCESS(1) [%name%].%time% >> Logs.TLF
 :: waits for user input
-echo .WaaitingUserInput(%time%) >> Logs.inf
+echo .WaaitingUserInput(%time%) >> Logs.TLF
 pause
-echo .UserInputGiven(%time%) >> Logs.inf
+echo .UserInputGiven(%time%) >> Logs.TLF
 cls
 :menu
 cls
 :: logs menu entry
-echo .MenuEntry(%time%) >> Logs.inf
+echo .MenuEntry(%time%) >> Logs.TLF
 :: main menu
 echo What Would You Like To Do? Type the number
 echo.
@@ -156,7 +156,7 @@ if %input% == 9 goto calc
 if %input% == 8 goto MAIN
 :accessories
 :: accessories (it has a bug. trying to solve)
-echo .AccessoryOpened (%time%) >> Logs.inf 
+echo .AccessoryOpened (%time%) >> Logs.TLF 
 cls
 echo What Would You Like To Do? Type the number
 echo.
@@ -204,7 +204,7 @@ ECHO.
 pause
 goto menu
 :TEXT
-echo .EnterTextEditor(%time%) >> Logs.inf
+echo .EnterTextEditor(%time%) >> Logs.TLF
 cls
 echo Text Editor 1.5
 set /p N= name of TXT file: 
@@ -224,7 +224,7 @@ goto menu
 
 :powerOptions
 cls
-echo .EnteredPowerOptions >> Logs.inf
+echo .EnteredPowerOptions >> Logs.TLF
 :: power options
 echo What Would You Like To Do? Type the number
 echo.
@@ -240,7 +240,7 @@ if %input% == 3 goto menu
 if %input% == 4 shutdown /s
 :productivity
 :: logging
-echo .EnterProductivity >> Logs.inf
+echo .EnterProductivity >> Logs.TLF
 :: productivity tools
 echo 1.Notes
 echo 2.Calculator
@@ -269,7 +269,7 @@ if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :menu2
 :: logging 
-echo .EnterToolMenu(%time%) >> Logs.inf
+echo .EnterToolMenu(%time%) >> Logs.TLF
 :: some other menu
 echo 1.Calc
 echo 2.Text Editor
@@ -420,7 +420,7 @@ echo are you okay?
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> Logs.inf
+	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> Logs.TLF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -457,7 +457,7 @@ goto menu
 cls
 pause
 echo .
-echo .LoadingStart(%time%) >> Logs.inf
+echo .LoadingStart(%time%) >> Logs.TLF
 timeout /T 1 /NOBREAK >nul
 echo ..
 timeout /T 1 /NOBREAK >nul
@@ -476,13 +476,13 @@ timeout /T 1 /NOBREAK >nul
 echo starting setup...
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
-echo .NameOfKernel(%~dpn0 ).%time% >> Logs.inf
+echo .NameOfKernel(%~dpn0 ).%time% >> Logs.TLF
 timeout /T 1 /NOBREAK >nul
 echo expanding registers.....
-echo .NewUser:True.Setup >> Logs.inf
+echo .NewUser:True.Setup >> Logs.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
-echo .restart_setup(%time%) >> Logs.inf
+echo .restart_setup(%time%) >> Logs.TLF
 timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
@@ -536,7 +536,7 @@ timeout /T 1 /NOBREAK >nul
 echo .......................O
 timeout /T 1 /NOBREAK >nul
 echo ........................
-echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.inf
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.TLF
 echo successfully downloaded Butter! :D
 pause
 goto boot 
@@ -557,7 +557,7 @@ goto menu2
 :adminTools
 cls
 :: admin tools for... admins
-echo .AdminToolsOpened(%time%) >> Logs.inf
+echo .AdminToolsOpened(%time%) >> Logs.TLF
 echo 1.kill your computer
 echo 2.crazy error
 echo 3.weird
@@ -579,7 +579,7 @@ echo 0xMEME :D :( :C
 pause
 goto adminTools
 :info
-echo .OpenSysInfo(%time%) >> Logs.inf
+echo .OpenSysInfo(%time%) >> Logs.TLF
 echo.==============================
 timeout /T 1 /NOBREAK >nul
 echo     Butter SUT 
