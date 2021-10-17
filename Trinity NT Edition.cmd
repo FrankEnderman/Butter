@@ -210,7 +210,7 @@ echo Text Editor 1.5
 set /p N= name of TXT file: 
 cls
 set /p WRITE=Write:
-echo %WRITE% >> %N%.txt
+echo %WRITE% -- written on:%date% : %time% >> %N%.ttf
 echo your document was created.
 pause
 goto menu
