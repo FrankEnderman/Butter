@@ -178,12 +178,12 @@ if %FHSK% == 6 goto adminTools
 if %FHSK% == 7 goto SUTInfo
 :clock 
 cls
-ECHO %time%
+ECHO it is %time%. 
 pause 
 goto menu
 :cal
 cls 
-echo %date%
+echo %date% : %time%
 pause
 goto menu
 :calc
