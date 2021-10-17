@@ -229,7 +229,7 @@ echo .EnteredPowerOptions >> Logs.inf
 echo What Would You Like To Do? Type the number
 echo.
 echo 1.Reboot
-echo 2.Boot into windows
+echo 2.exit
 echo 3.Return to menu 
 echo 4.shutdown
 :: number inputs
