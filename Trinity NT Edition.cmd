@@ -5,13 +5,14 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
+set ver= 1.6 Beta 3
  @echo off
  :: sets color to white
 color 06
 :: sets title
 title Butter SUT Winter 1.6 Beta 3
 :: adds boot info to Logs.TLF file
-echo Boot.%random%.%time%(%date%) {Build:1.6 B3} >> Logs.TLF
+echo .Boot.%random%.%time%(%date%) {version: %ver%} >> Logs.TLF
 :boot
 :: clears messages on boot
 cls
@@ -301,7 +302,7 @@ cls
 echo ========================
 echo         BUTTER SUT
 echo ========================
-echo version: 1.5 Build 16384
+echo version: %ver%
 echo KERNEL: SUT NT 1.3
 echo ========================
 echo software type: 
@@ -420,7 +421,7 @@ echo are you okay?
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.DPN.%CrashReason%.INCL.%random%.%time% >> Logs.TLF
+	echo .crash.DPN.%CrashReason%.%ver%.%random%.%time% >> Logs.TLF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -537,7 +538,7 @@ echo .......................O
 timeout /T 1 /NOBREAK >nul
 echo ........................
 echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username%) >> Logs.TLF
-echo successfully downloaded Butter! :D
+echo successfully downloaded Butter %ver%! :D
 pause
 goto boot 
 :music
@@ -590,7 +591,7 @@ echo     DETAILS
 timeout /T 1 /NOBREAK >nul
 echo.
 timeout /T 1 /NOBREAK >nul
-echo     VERSION = Winter 1.5 B16384
+echo     VERSION = %ver%
 timeout /T 1 /NOBREAK >nul
 echo.     
 timeout /T 1 /NOBREAK >nul
@@ -654,7 +655,7 @@ echo Invalid command.
 pause
 goto menu
 :MAIN
-title Common Sense AV- Butter SUT
+title Common Sense AV- Butter SUT %ver%
 cls
 echo 1.Security 2.about
 set /p sel= select:
