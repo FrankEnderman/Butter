@@ -648,6 +648,7 @@ echo 1.Security 2.about 3.scan
 set /p sel= select:
 if %sel% == 1 goto security
 if %sel% == 2 goto about
+if %sel% == 3 goto scan
 
 :security
 cls
