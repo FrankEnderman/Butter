@@ -152,7 +152,7 @@ if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto shutdown
 if %input% == 6 goto restart
-if %input% == 7 exit
+if %input% == 7 goto exit
 if %input% == 9 goto calc
 if %input% == 8 goto MAIN
 :accessories
@@ -677,3 +677,7 @@ echo 4. Worms
 echo 5. Spyware
 pause
 goto MAIN
+:exit
+echo press any key to exit
+pause
+exit
