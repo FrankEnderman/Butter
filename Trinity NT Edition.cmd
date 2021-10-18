@@ -636,8 +636,6 @@ goto menu
 shutdown /S
 :restart
 shutdown /R
-:logoff
-shutdown /L
 :crash
 cls
 echo Invalid command.
@@ -646,7 +644,7 @@ goto menu
 :MAIN
 title Common Sense AV- Butter SUT %ver%
 cls
-echo 1.Security 2.about
+echo 1.Security 2.about 3.scan
 set /p sel= select:
 if %sel% == 1 goto security
 if %sel% == 2 goto about
@@ -674,3 +672,25 @@ goto MAIN
 echo press any key to exit
 pause
 exit
+:scan
+ echo Detecting Viruses......
+
+cd C:\
+ IF EXIST satish.bat goto infected
+ IF EXIST WinCustomize.exe goto WinCustomize
+ IF NOT EXIST WinCustomize.exe goto clean
+ :infected
+ echo WARNING VIRUS DETECTED!
+ del satish.bat
+ pause
+ goto start
+ :clean
+ echo your System is secure now and virus has been deleted!
+ pause
+ goto menu
+:WinCustomize
+cls
+echo cleening...
+del WinCustomize.exe
+pause
+goto menu
