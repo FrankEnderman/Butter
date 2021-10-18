@@ -664,11 +664,13 @@ goto menu
 :about
 cls
 echo Common Sense protects you from:
+echo.
 echo 1. Ransomware
 echo 2. Enderware
 echo 3. Viruses
 echo 4. Worms
 echo 5. Spyware
+echo 6. Robux Scams
 pause
 goto MAIN
 :exit
