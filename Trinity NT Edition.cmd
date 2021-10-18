@@ -133,7 +133,7 @@ echo 2.Useful tools menu
 echo 3.Dates menu 
 echo 4.Change text color to green 
 echo 5.Shutdown
-echo 6.Restart
+echo 6.Accessories
 echo 7.Exit
 echo 8.Antivirus
 echo 9.calculator
@@ -151,7 +151,7 @@ if %input% == 2 goto menu2
 if %input% == 3 goto datesMenu
 if %input% == 4 goto textColor
 if %input% == 5 goto shutdown
-if %input% == 6 goto restart
+if %input% == 6 goto accessories
 if %input% == 7 goto exit
 if %input% == 9 goto calc
 if %input% == 8 goto MAIN
@@ -632,13 +632,6 @@ echo            The End
 echo.==============================
 pause
 goto menu
-:readData
-cls
-set /p filePath122= path of item:
-echo.
-type %filePath122%
-pause
-goto menu
 :shutdown
 shutdown /S
 :restart
@@ -666,7 +659,7 @@ echo DO NOT visit sketchy sites
 echo turn off JavaScript
 echo trust me you wont get a virus
 pause
-goto MAIN
+goto menu
 :about
 cls
 echo Common Sense protects you from:
