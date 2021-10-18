@@ -679,7 +679,6 @@ exit
 cd C:\
  IF EXIST satish.bat goto infected
  IF EXIST WinCustomize.exe goto WinCustomize
- IF EXIST *.exe goto sus
  goto clean
  :infected
  echo WARNING VIRUS DETECTED!
@@ -696,5 +695,3 @@ echo cleening...
 del WinCustomize.exe
 pause
 goto menu
-:sus
-echo seems like your computer has .exe files...
