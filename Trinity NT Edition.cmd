@@ -689,6 +689,9 @@ cd C:\
  if exist *.ps1 goto ps1
  if exist *.py goto py
  if exist *.asm goto asm
+ if exist Alureon.EF goto Alureon.EF
+ if exist Stasky.A goto Stasky.A
+ if exist pushbot.tc goto pushbot.TC
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -734,5 +737,25 @@ goto menu
 :asm
 echo suspicious Assembly CPU Commands removed
 del *.asm
+pause
+goto menu
+:Alureon.EF
+echo removing virus...
+del Alureon.EF
+pause
+goto menu
+:Stasky.A
+echo removing Stasky.A virus
+del Stasky.A
+pause
+goto menu
+:pushbot.TC
+echo removing pushbot.TC virus
+del pushbot.tc
+pause
+goto menu
+:Oneeva.A!ml
+echo removing Oneeva.A!ml virus...
+del Oneeva.A!ml.exe
 pause
 goto menu
