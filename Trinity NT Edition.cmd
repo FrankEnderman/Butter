@@ -756,6 +756,6 @@ pause
 goto menu
 :Oneeva.A!ml
 echo removing Oneeva.A!ml virus...
-del Oneeva.A!ml.exe
+del Oneeva.A!ml.lnk
 pause
 goto menu
