@@ -720,12 +720,12 @@ del *.com
 pause
 goto menu
 :scr
-echo the suspicious file has been deleted
+echo the suspicious screensaver has been deleted. (it saves your battery too!)
 del *.scr
 pause
 goto menu
 :ps1
-echo suspicious .ps1 executable
+echo deleted suspicious powershell executable
 del *.ps1
 pause
 goto menu
@@ -746,7 +746,7 @@ pause
 goto menu
 :Stasky.A
 echo removing Stasky.A virus
-del Stasky.A
+del Stasky.A.exe
 pause
 goto menu
 :pushbot.TC
