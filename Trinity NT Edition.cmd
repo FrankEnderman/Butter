@@ -129,9 +129,9 @@ echo .MenuEntry(%time%) >> MBR.TLF
 echo time and dates:
 ECHO current time: %time%
 echo date: %date%
-echo name: %name% 
+echo username: %name% 
 echo.
-echo What Would You Like To Do? Type the number
+echo Type the number for a process
 echo.
 :: shows options
 echo 1.Butter Setup (FOR NEW USERS!) 
