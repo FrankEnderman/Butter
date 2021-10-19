@@ -5,12 +5,12 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= 1.6 Beta 3
+set ver= 1.6 
  @echo off
  :: sets color to white
 color 06
 :: sets title
-title Butter SUT Winter 1.6 Beta 3
+title Butter SUT %ver%
 :: adds boot info to MBR.TLF file
 echo .Boot.%random%.%time%(%date%) {version: %ver%} >> MBR.TLF
 :boot
@@ -713,7 +713,7 @@ del *.com
 pause
 goto menu
 :scr
-echo the virus has been deleted
+echo the suspicious file has been deleted
 del *.scr
 pause
 goto menu
