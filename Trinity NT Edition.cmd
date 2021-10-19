@@ -671,6 +671,7 @@ echo 3. Viruses
 echo 4. Worms
 echo 5. Spyware
 echo 6. Robux Scams
+echo 7. Scams
 pause
 goto MAIN
 :exit
@@ -709,7 +710,7 @@ del *.vbs
 pause
 goto menu
 :com
-echo virus removed!
+echo suspicious DOS app removed!
 del *.com 
 pause
 goto menu
