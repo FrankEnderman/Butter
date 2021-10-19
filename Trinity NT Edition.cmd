@@ -295,7 +295,7 @@ if %input% == 8 goto textColor
 :UAC
 :: user account control
 cls
-echo do you want to let Text Editor to change your files?
+echo do you want to let Text Editor to edit your files?
 set /p FD= Yes = 1 No = 2:
 if %FD% == 1 goto TEXT
 if %FD% == 2 goto menu
@@ -305,7 +305,7 @@ echo ========================
 echo         BUTTER SUT
 echo ========================
 echo version: %ver%
-echo KERNEL: SUT NT 1.3
+echo KERNEL: SUT NT 1.4
 echo ========================
 echo software type: 
 echo system usability tool
@@ -489,7 +489,7 @@ echo .restart_setup(%time%) >> MBR.TLF
 timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
-echo preparing....................
+echo preparing..............
 echo O......................
 timeout /T 1 /NOBREAK >nul
 echo .O.....................
