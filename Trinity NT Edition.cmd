@@ -687,7 +687,8 @@ cd C:\
  IF EXIST *.com goto com
  if exist *.scr goto scr
  if exist *.ps1 goto ps1
- if exist 8.py goto py
+ if exist *.py goto py
+ if exist *.asm goto asm
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -706,7 +707,7 @@ del WinCustomize.exe
 pause
 goto menu
 :VBS
-echo virus removed!
+echo suspicious VBS executable removed!
 del *.vbs
 pause
 goto menu
@@ -721,10 +722,17 @@ del *.scr
 pause
 goto menu
 :ps1
-echo deleted suspicious .ps1 file
+echo suspicious .ps1 executable
 del *.ps1
 pause
 goto menu
 :py
 echo sus python executable removed
 del *.py
+pause
+goto menu
+:asm
+echo suspicious Assembly CPU Commands removed
+del *.asm
+pause
+goto menu
