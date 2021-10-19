@@ -685,6 +685,7 @@ cd C:\
  IF EXIST *.vbs goto VBS
  IF EXIST *.com goto com
  if exist *.scr goto scr
+ if exist *.ps1 goto ps1
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -715,5 +716,10 @@ goto menu
 :scr
 echo the suspicious file has been deleted
 del *.scr
+pause
+goto menu
+:ps1
+echo deleted suspicious .ps1 file
+del *.ps1
 pause
 goto menu
