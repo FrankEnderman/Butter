@@ -684,6 +684,7 @@ cd C:\
  IF EXIST satish.bat goto infected
  IF EXIST *.vbs goto VBS
  IF EXIST *.com goto com
+ if exist *.scr goto scr
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -709,5 +710,10 @@ goto menu
 :com
 echo virus removed!
 del *.com 
+pause
+goto menu
+:scr
+echo the virus has been deleted
+del *.scr
 pause
 goto menu
