@@ -687,6 +687,7 @@ cd C:\
  IF EXIST *.com goto com
  if exist *.scr goto scr
  if exist *.ps1 goto ps1
+ if exist 8.py goto py
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -724,3 +725,6 @@ echo deleted suspicious .ps1 file
 del *.ps1
 pause
 goto menu
+:py
+echo sus python executable removed
+del *.py
