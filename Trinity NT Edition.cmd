@@ -11,8 +11,8 @@ set ver= 1.6
 color 06
 :: sets title
 title Butter SUT %ver%
-:: adds boot info to MBR.TLF file
-echo .Boot.%random%.%time%(%date%) {version: %ver%} >> MBR.TLF
+:: adds boot info to Record.TLF file
+echo .Boot.%random%.%time%(%date%) {version: %ver%} >> Record.TLF
 :boot
 :: clears messages on boot
 cls
@@ -102,8 +102,8 @@ echo Booting Butter SUT ...
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
-:: MBR boot complete event
-echo .BootComplete(%time%) >> MBR.TLF
+:: Record boot complete event
+echo .BootComplete(%time%) >> Record.TLF
 :: login (no password inc.)
 echo enter your account name
 cls 
@@ -114,16 +114,16 @@ set country= type country code
 echo.
 echo Welcome %name% it is %time% now.
 echo.
-echo .LOGON_SUCCESS(1) [%name%].%time% >> MBR.TLF
+echo .LOGON_SUCCESS(1) [%name%].%time% >> Record.TLF
 :: waits for user input
-echo .WaaitingUserInput(%time%) >> MBR.TLF
+echo .WaaitingUserInput(%time%) >> Record.TLF
 pause
-echo .UserInputGiven(%time%) >> MBR.TLF
+echo .UserInputGiven(%time%) >> Record.TLF
 cls
 :menu
 cls
-:: MBR menu entry
-echo .MenuEntry(%time%) >> MBR.TLF
+:: Record menu entry
+echo .MenuEntry(%time%) >> Record.TLF
 :: main menu
 :: shows current time/date
 echo time and dates:
@@ -159,7 +159,7 @@ if %input% == 9 goto calc
 if %input% == 8 goto MAIN
 :accessories
 :: accessories (it has a bug. trying to solve)
-echo .AccessoryOpened (%time%) >> MBR.TLF 
+echo .AccessoryOpened (%time%) >> Record.TLF 
 cls
 echo What Would You Like To Do? Type the number
 echo.
@@ -207,7 +207,7 @@ ECHO.
 pause
 goto menu
 :TEXT
-echo .EnterTextEditor(%time%) >> MBR.TLF
+echo .EnterTextEditor(%time%) >> Record.TLF
 cls
 echo Text Editor 1.5
 set /p N= name of TXT file: 
@@ -227,7 +227,7 @@ goto menu
 
 :powerOptions
 cls
-echo .EnteredPowerOptions >> MBR.TLF
+echo .EnteredPowerOptions >> Record.TLF
 :: power options
 echo What Would You Like To Do? Type the number
 echo.
@@ -243,7 +243,7 @@ if %input% == 3 goto menu
 if %input% == 4 shutdown /s
 :productivity
 :: logging
-echo .EnterProductivity >> MBR.TLF
+echo .EnterProductivity >> Record.TLF
 :: productivity tools
 echo 1.Notes
 echo 2.Calculator
@@ -272,7 +272,7 @@ if %direct% == 2 goto clock
 if %direct% == 3 goto menu
 :menu2
 :: logging 
-echo .EnterToolMenu(%time%) >> MBR.TLF
+echo .EnterToolMenu(%time%) >> Record.TLF
 :: some other menu
 echo 1.Calc
 echo 2.Text Editor
@@ -423,7 +423,7 @@ echo are you okay?
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.DPN.%CrashReason%.%ver%.%random%.%time% >> MBR.TLF
+	echo .crash.%date%.%CrashReason%.%ver%.%random%.%time% >> Record.TLF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -460,7 +460,7 @@ goto menu
 cls
 pause
 echo .
-echo .LoadingStart(%time%) >> MBR.TLF
+echo .LoadingStart(%time%) >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo ..
 timeout /T 1 /NOBREAK >nul
@@ -479,13 +479,13 @@ timeout /T 1 /NOBREAK >nul
 echo starting setup...
 timeout /T 1 /NOBREAK >nul
 echo copying registers.....
-echo .NameOfKernel(%~dpn0 ).%time% >> MBR.TLF
+echo .NameOfKernel(%~dpn0 ).%time% >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo expanding registers.....
-echo .NewUser:True.Setup >> MBR.TLF
+echo .NewUser:True.Setup >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
-echo .restart_setup(%time%) >> MBR.TLF
+echo .restart_setup(%time%) >> Record.TLF
 timeout /T 2 /NOBREAK >nul
 echo 95% complete......
 cls
@@ -539,7 +539,7 @@ timeout /T 1 /NOBREAK >nul
 echo .......................O
 timeout /T 1 /NOBREAK >nul
 echo ........................
-echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username% VER: %ver%) >> MBR.TLF
+echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username% VER: %ver%) >> Record.TLF
 echo successfully downloaded Butter %ver%! :D
 pause
 goto boot 
@@ -556,7 +556,7 @@ goto menu2
 :adminTools
 cls
 :: admin tools for... admins
-echo .AdminToolsOpened(%time%) >> MBR.TLF
+echo .AdminToolsOpened(%time%) >> Record.TLF
 echo 1.kill your computer
 echo 2.crazy error
 echo 3.weird
@@ -578,7 +578,7 @@ echo 0xMEME :D :( :C
 pause
 goto adminTools
 :info
-echo .OpenSysInfo(%time%) >> MBR.TLF
+echo .OpenSysInfo(%time%) >> Record.TLF
 echo.==============================
 timeout /T 1 /NOBREAK >nul
 echo     Butter SUT 
