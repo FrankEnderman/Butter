@@ -730,7 +730,7 @@ del *.ps1
 pause
 goto menu
 :py
-echo sus python executable removed
+echo sus python script removed
 del *.py
 pause
 goto menu
@@ -741,7 +741,7 @@ pause
 goto menu
 :Alureon.EF
 echo removing virus...
-del Alureon.EF
+del Alureon.EF.exe
 pause
 goto menu
 :Stasky.A
