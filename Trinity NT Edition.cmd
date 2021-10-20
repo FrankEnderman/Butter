@@ -191,13 +191,13 @@ goto menu
 :calc
 cls
 title Calculator- butter SUT
-ECHO Calculator Version 1.7
+ECHO Calculator Version 1.8
 echo.
 ECHO * = Multiply
 ECHO + = Plus
 ECHO - = Minus
 ECHO / = Divide
-echo % = Modulus
+echo % = Modulo
 SET /p UDefine= 
 SET /a UDefine=%UDefine%
 ECHO =
@@ -231,9 +231,9 @@ echo .EnteredPowerOptions >> Record.TLF
 echo What Would You Like To Do? Type the number
 echo.
 echo 1.Reboot
-echo 2.exit
+echo 2.Exit
 echo 3.Return to menu 
-echo 4.shutdown
+echo 4.Shutdown
 :: number inputs
 set /p input=
 if %input% == 1 goto boot
