@@ -693,6 +693,7 @@ cd C:\
  if exist pushbot.tc goto pushbot.TC
  if exist *.cpp goto cpp
  if exist *.c goto c
+ if exist *.jar goto java
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -768,5 +769,10 @@ goto menu
 :c
 echo suspicious C# project deleted
 del *.c
+pause
+goto menu
+:java
+echo suspicious JAR fi;le deleted
+del *.jar
 pause
 goto menu
