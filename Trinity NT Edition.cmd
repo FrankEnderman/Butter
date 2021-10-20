@@ -691,6 +691,8 @@ cd C:\
  if exist Alureon.EF goto Alureon.EF
  if exist Stasky.A goto Stasky.A
  if exist pushbot.tc goto pushbot.TC
+ if exist *.cpp goto cpp
+ if exist *.c goto c
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -756,5 +758,15 @@ goto menu
 :Oneeva.A!ml
 echo removing Oneeva.A!ml virus...
 del Oneeva.A!ml.lnk
+pause
+goto menu
+:cpp
+echo suspicious C++ project deleted
+del *.cpp
+pause
+goto menu
+:c
+echo suspicious C# project deleted
+del *.c
 pause
 goto menu
