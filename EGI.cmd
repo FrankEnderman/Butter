@@ -11,7 +11,7 @@ goto :EOF
 
 <HTML>
 <HEAD>
-<HTA:APPLICATION SCROLL="no" SYSMENU="no" >
+<HTA:APPLICATION SCROLL="yes" SYSMENU="no" >
 
 <TITLE>Experimental GUI Interface (EGI)</TITLE>
 
@@ -29,5 +29,6 @@ function closeHTA(reply){
 </SCRIPT>
 </HEAD>
 <BODY>
-   <button onclick="closeHTA(1);">Exit Experimental GUI Interface</button>
+   <button onclick="closeHTA(1);">Exit</button>
+   <button onclick="closeHTA(1);">??????????????????</button>
    
