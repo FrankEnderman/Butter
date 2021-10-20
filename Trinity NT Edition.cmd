@@ -107,7 +107,7 @@ echo .BootComplete(%time%) >> Record.TLF
 :: login (no password inc.)
 echo enter your account name
 cls 
-echo type your full name or short name 
+echo type your username
 set/p name= enter name:
 echo.
 set country= type country code
@@ -419,7 +419,7 @@ cls
 timeout /T 3 /NOBREAK >nul
 echo restarting....
 timeout /T 2 /NOBREAK >nul
-echo are you okay?
+echo fixing...
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
