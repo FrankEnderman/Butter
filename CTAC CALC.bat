@@ -5,13 +5,13 @@ title CALCULATOR
 goto calc
 :calc
 cls
-ECHO Calculator Version 1.4
+ECHO Calculator Version 1.6
 echo.
-ECHO * = MULTIPLY
-ECHO + = ADD
-ECHO - = SUBTRACT
-ECHO / = DIVIDE
-echo % = boolean/remainder
+ECHO * = Multiply
+ECHO + = Add
+ECHO - = Minus
+ECHO / = Divide
+echo % = Modulus
 SET /p UDefine= 
 SET /a UDefine=%UDefine%
 ECHO =
