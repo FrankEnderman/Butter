@@ -1,8 +1,5 @@
 # Overview
 Butter is a system usability tool.
-## compiled editions
-if you want to tinker with the code, download the batch file instead.
-if you are a end user, download the executable (EXE) version.
 ## Compatibility
 the modern versions are not compatible with DOS and will not run on windows 8, 7, Vista, XP, 98/95, windows ME
 ## Links for Files
