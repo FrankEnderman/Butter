@@ -110,9 +110,8 @@ cls
 echo type your username
 set/p name= enter name:
 echo.
-set country= type country code
 echo.
-echo Welcome %name% it is %time% now.
+echo Welcome %name% it is %time% %date%
 echo.
 echo .LOGON_SUCCESS(1) [%name%].%time% >> Record.TLF
 :: waits for user input
