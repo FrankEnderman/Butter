@@ -146,16 +146,16 @@ echo.
 
 :: control points
 echo.
-set /p input= choose:
-if %input% == 1 goto butterDeploy
-if %input% == 2 goto menu2
-if %input% == 3 goto datesMenu
-if %input% == 4 goto textColor
-if %input% == 5 goto shutdown
-if %input% == 6 goto accessories
-if %input% == 7 goto exit
-if %input% == 9 goto calc
-if %input% == 8 goto MAIN
+set /p MenuSel= choose:
+if %MenuSel% == 1 goto butterDeploy
+if %MenuSel% == 2 goto menu2
+if %MenuSel% == 3 goto datesMenu
+if %MenuSel% == 4 goto textColor
+if %MenuSel% == 5 goto shutdown
+if %MenuSel% == 6 goto accessories
+if %MenuSel% == 7 goto exit
+if %MenuSel% == 9 goto calc
+if %MenuSel% == 8 goto MAIN
 :accessories
 :: accessories (it has a bug. trying to solve)
 echo .AccessoryOpened (%time%) >> Record.TLF 
@@ -170,14 +170,14 @@ echo 5.games
 echo 6.admin tools (DANGER)
 echo 7.SUT info 
 echo.
-set FHSK= option:
-if %FHSK% == 1 goto textColor
-if %FHSK% == 2 goto controls
-if %FHSK% == 3 goto info
-if %FHSK% == 4 goto menu2
-if %FHSK% == 5 goto gamesMenu
-if %FHSK% == 6 goto adminTools
-if %FHSK% == 7 goto SUTInfo
+set AccessorySel= option:
+if %AccessorySel% == 1 goto textColor
+if %AccessorySel% == 2 goto controls
+if %AccessorySel% == 3 goto info
+if %AccessorySel% == 4 goto menu2
+if %AccessorySel% == 5 goto gamesMenu
+if %AccessorySel% == 6 goto adminTools
+if %AccessorySel% == 7 goto SUTInfo
 :clock 
 cls
 ECHO it is %time%. 
@@ -233,13 +233,13 @@ echo.
 echo 1.Reboot
 echo 2.Exit
 echo 3.Return to menu 
-echo 4.Shutdown
+echo 4.Shutdown PC
 :: number inputs
-set /p input=
-if %input% == 1 goto boot
-if %input% == 2 exit
-if %input% == 3 goto menu
-if %input% == 4 shutdown /s
+set /p PowerSel=
+if %PowerSel% == 1 goto boot
+if %PowerSel% == 2 exit
+if %PowerSel% == 3 goto menu
+if %PowerSel% == 4 shutdown /s
 :productivity
 :: logging
 echo .EnterProductivity >> Record.TLF
@@ -248,10 +248,10 @@ echo 1.Notes
 echo 2.Calculator
 echo 3.Menu
 
-set /p input= select:
-if %input% == 1 goto TEXT
-if %input% == 2 goto calc
-if %input% == 3 goto menu
+set /p PRSel= select:
+if %PRSel% == 1 goto TEXT
+if %PRSel% == 2 goto calc
+if %PRSel% == 3 goto menu
 
 :settings
 cls
@@ -295,9 +295,9 @@ if %input% == 8 goto textColor
 :: user account control
 cls
 echo do you want to let Text Editor to edit your files?
-set /p FD= Yes = 1 No = 2:
-if %FD% == 1 goto TEXT
-if %FD% == 2 goto menu
+set /p UACSel= Yes = 1 No = 2:
+if %UACSel% == 1 goto TEXT
+if %UACSel% == 2 goto menu
 :SUTInfo
 cls
 echo ========================
@@ -322,15 +322,15 @@ echo 3.Menu
 echo 4.BROKEN MODE (DANGER)
 echo 5.show nuclear show :D 6.NUKE 7.Hi
 :: decalre variable
-set /p DFF= select:
+set /p ControlSel= select:
 :: if conditions
-if %DFF% == 1 goto powerOptions 
-if %DFF% == 2 goto menu2
-if %DFF% == 3 goto menu
-if %DFF% == 4 goto brokenMode
-if %DFF% == 5 goto nuclearIcon
-if %DFF% == 6 goto nuke
-if %DFF% == 7 goto hi
+if %ControlSel% == 1 goto powerOptions 
+if %ControlSel% == 2 goto menu2
+if %ControlSel% == 3 goto menu
+if %ControlSel% == 4 goto brokenMode
+if %ControlSel% == 5 goto nuclearIcon
+if %ControlSel% == 6 goto nuke
+if %ControlSel% == 7 goto hi
 :nuclearIcon
 :: clear screen command
 cls
@@ -559,10 +559,10 @@ echo .AdminToolsOpened(%time%) >> Record.TLF
 echo 1.kill your computer
 echo 2.crazy error
 echo 3.weird
-set GHS= select:
-if %GHS% == 1 goto brokenMode
-if %GHS% == 2 goto crazyError
-if %GHS% == 3 goto weird
+set AdminSel= select:
+if %AdminSel% == 1 goto brokenMode
+if %AdminSel% == 2 goto crazyError
+if %AdminSel% == 3 goto weird
 :crazyError
 echo .EnterCrazyError(%time%)
 cls
