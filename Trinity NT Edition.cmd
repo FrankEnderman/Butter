@@ -138,7 +138,7 @@ echo 2.Useful tools menu
 echo 3.Dates menu 
 echo 4.Change text color to green 
 echo 5.Shutdown
-echo 6.Accessories
+echo 6.Ping
 echo 7.Exit
 echo 8.Antivirus
 echo 9.calculator
@@ -152,7 +152,7 @@ if %MenuSel% == 2 goto menu2
 if %MenuSel% == 3 goto datesMenu
 if %MenuSel% == 4 goto textColor
 if %MenuSel% == 5 goto shutdown
-if %MenuSel% == 6 goto accessories
+if %MenuSel% == 6 goto enterDNS
 if %MenuSel% == 7 goto exit
 if %MenuSel% == 9 goto calc
 if %MenuSel% == 8 goto MAIN
