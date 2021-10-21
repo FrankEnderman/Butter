@@ -713,7 +713,7 @@ del WinCustomize.exe
 pause
 goto menu
 :VBS
-echo suspicious VBS executable removed!
+echo suspicious VBS script removed!
 del *.vbs
 pause
 goto menu
@@ -782,3 +782,8 @@ echo suspicious Fortran file deleted
 del *.f
 pause
 goto menu
+:enterDNS
+echo enter IP of your failing website
+set IPInput= IP:
+if %IPInput% == nul goto menu
+ping %IPInput%
