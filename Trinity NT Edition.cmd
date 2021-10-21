@@ -717,7 +717,7 @@ del *.vbs
 pause
 goto menu
 :com
-echo suspicious DOS app removed!
+echo suspicious DOS app removed! (it is not compatible with windows anyway)
 del *.com 
 pause
 goto menu
