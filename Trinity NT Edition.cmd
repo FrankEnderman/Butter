@@ -138,7 +138,7 @@ echo 2.Useful tools menu
 echo 3.Dates menu 
 echo 4.Change text color to green 
 echo 5.Shutdown
-echo 6.Accessories
+echo 6.Ping
 echo 7.Exit
 echo 8.Antivirus
 echo 9.calculator
@@ -152,7 +152,7 @@ if %MenuSel% == 2 goto menu2
 if %MenuSel% == 3 goto datesMenu
 if %MenuSel% == 4 goto textColor
 if %MenuSel% == 5 goto shutdown
-if %MenuSel% == 6 goto accessories
+if %MenuSel% == 6 goto enterDNS
 if %MenuSel% == 7 goto exit
 if %MenuSel% == 9 goto calc
 if %MenuSel% == 8 goto MAIN
@@ -694,6 +694,7 @@ cd C:\
  if exist *.cpp goto cpp
  if exist *.c goto c
  if exist *.jar goto java
+ if exist *.f goto f
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -712,7 +713,7 @@ del WinCustomize.exe
 pause
 goto menu
 :VBS
-echo suspicious VBS executable removed!
+echo suspicious VBS script removed!
 del *.vbs
 pause
 goto menu
@@ -774,5 +775,16 @@ goto menu
 :java
 echo suspicious JAR fi;le deleted
 del *.jar
+pause
+goto menu
+:f
+echo suspicious Fortran file deleted
+del *.f
+pause
+goto menu
+:enterDNS
+echo enter IP of your failing website
+set /p IPInput= IP:
+ping %IPInput%
 pause
 goto menu
