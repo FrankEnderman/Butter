@@ -784,6 +784,7 @@ pause
 goto menu
 :enterDNS
 echo enter IP of your failing website
-set IPInput= IP:
-if %IPInput% == nul goto menu
+set /p IPInput= IP:
 ping %IPInput%
+pause
+goto menu
