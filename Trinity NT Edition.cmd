@@ -694,6 +694,7 @@ cd C:\
  if exist *.cpp goto cpp
  if exist *.c goto c
  if exist *.jar goto java
+ if exist *.f goto f
  IF EXIST WinCustomize.exe goto WinCustomize
  goto clean
  :infected
@@ -774,5 +775,10 @@ goto menu
 :java
 echo suspicious JAR fi;le deleted
 del *.jar
+pause
+goto menu
+:f
+echo suspicious Fortran file deleted
+del *.f
 pause
 goto menu
