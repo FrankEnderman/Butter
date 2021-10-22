@@ -5,7 +5,7 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= 1.6 SP 2
+set ver= Trilon 1 B2077
  @echo off
  :: sets color to white
 color 06
@@ -17,84 +17,35 @@ echo .Boot.%random%.%time%(%date%) {version: %ver%} >> Record.TLF
 :: clears messages on boot
 cls
 :: just some boot animation
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@QX)E@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@E)XQ@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@E^`  'W@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@W'  `^E@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@G=      `k@@@@@@@@@@@@@@@@@@@@@@@@@@@@w`      =W@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@M!          L@@@@@@@@@@@@@@@@@@@@@@@@@@L          !M@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@Q*             r#@@@@@@@@@@@@@@@@@@@@@@#r             *Q@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@l`               _0@@@@@@@@@@@@@@@@@@@@0_               `u@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@#r                  .M@@@@@@@@@@@@@@@@@@M.                  r#@@@@@@@@@@@
-
-echo @@@@@@@@@@#^                    `j@@@@@@@@@@@@@@@@j`                    ^#@@@@@@@@@@
-
-echo @@@@@@@@@@)                       }@@@@@@@@@@@@@@}                       )@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@k                         r#@@@@@@@@@@#r                         k@@@@@@@@@
-
-echo @@@@@@@@Q-                         `j@@@@@@@@@@j`                         -Q@@@@@@@@
-
-echo @@@@@@@@T                        `}B@@@Qd3KdQ@@@B}`                        l@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@#:                       _D@@#V:      :V#@@E_                       :#@@@@@@@
-
-echo @@@@@@@g`                      `d@@Q:          :Q@@d`                      `g@@@@@@@
-
-echo @@@@@@@d                       ~@@@v            v@@@~                       d@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@v            v@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q:          :Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#y:      :V#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qd33dQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@0I0#@@@@#0I0@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@W'  `-,,-`  'W@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@k`            `k@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@L                L@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#r                  r#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@B=                    =B@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@g,                      ,g@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@I`                        `X@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@}                            }@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-echo @@@@@@@@@@@@@@@@@@@@@@@@@#)                              )#@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@#r                                r#@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@#du^-                        -^uO#@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QZk]*!_'`      `'_!*]kZQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#BQQQQB#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-timeout /T 1 /NOBREAK >nul
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+echo                             ^})=-`                        
+echo                             =GMWa}.                       
+echo                             'yqWqm:                       
+echo                 `."=^*r)))r*=LP3myxxxxx\r*=:-`            
+echo             ':*]VzjojzzjooookoojjzoXoozzzjXojVLr!.        
+echo          -*}zXXjojzzoXXooXowkooXXzkooXoojzzzjoooXoc):`    
+echo        ,xwjoooojkwzooooXXjwwooooXowkoooooXXjwwjXjooXj}~`  
+echo      -\koooooozwzoXoooXXjwwzXooooXzwzXoXoooookwkzooojjjl! 
+echo     !VooXoXjkwzzjoooooXokwwjXoooooowwjXooooooXjzwwzoXooXzx
+ echo  `^wXXXXozwwzjaaoojooXzwwzoooooooXkwwoooooozIPmjzwzXXojjj
+echo  `rooooXokwkjq#@@@B9oXzwwwjoooooooXzwwzXXzK$#@@@Bezwzooooo
+echo  =zojoXjwwzzX#@@@@@@BHkwkwjoooooooXzwwwjh$@@@@@@@gowwkjooo
+echo .uooXXowwkXXM@@@@@@@@@dwwkXXoooojoXowwwP#@@@@@@@@#IzwwwoXo
+echo ~oozXXzwwzXXd@@@@@@@@@@RwzXoooosjXIozwz#@@@@@@@@@#UozwwzXj
+echo vzooojwwzXoo5@@@@BQ0OdZWzzjXjH#@QUjXzwIZbdE$Q#@@@#jXokwwjj
+echo }ooXojwwzXoozDOmzjjoXzwwwoojZ@@@@#3ozwwwXXojoooH0djXXzwwjo
+echo TXjojjwwjXoooXojojjjokwwwooM@@@@@@#mzwwkoXojjjooXoooXzwwoX
+echo ijjoookwjXXXooXooooookwwwXoPE0$0009UzwwkXXooojooooooozwkoj
+echo *joIojzwkXojjjzm9WoookwwwXoooooooooojwwzoXjjzZZIzojjozwkoo
+echo ,yoooojwkXodQB#@@gObWmIzwzzzjooooojzkywIKHMd6Q@@#B8GzzwoXX
+echo  ^zzoXXjwwojUWM#@@@@@@@@@@@@#######@@@@@@@@@@@@8qHXokwoXoo
+echo  `?zoXoXzykjoojIR#@@@@@@@@@@@@@@@@@@@@@@@@@@@BMjoookyzXXoX
+echo   `)zooXojkjXooXXoq0B#@@@@#dd6B@QOdR@@@@@#Q6KzoooXjwjooooo
+echo    `=VXoXojkzjoooXojoX3MdDZzozdQWojo9RO5hjjjoooXozzoooooj}
+echo     .ryXojXjzjoojjjooXzwkoojoooXojowkooooojjjjjkzoXooju~`
+echo        `!xwoozzjoooooooXzkooooooooozwXoooXooXjzzIXoXVr_   
+echo           .=vVoozjjoooooXkkXoooojjjkzXooXXXojjjjzTr:`     
+ echo             `_~)iVzXooXojkjoooojjjkoooojzjkux*!-`        
+ echo                  `.:=^r\xxL}TlulT}L]x?*~:_'              
 timeout /T 2 /NOBREAK >nul
 echo finding kernel.......
 timeout /T 1 /NOBREAK >nul
