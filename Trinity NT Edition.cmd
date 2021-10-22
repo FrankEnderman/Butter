@@ -480,7 +480,8 @@ timeout /T 1 /NOBREAK >nul
 echo copying registers.....
 echo .NameOfKernel(%~dpn0 ).%time% >> Record.TLF
 timeout /T 1 /NOBREAK >nul
-echo expanding registers.....
+echo downloading...
+echo .FirstBoot > Record.TLF
 echo .NewUser:True.Setup >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
@@ -788,3 +789,4 @@ set /p IPInput= IP:
 ping %IPInput%
 pause
 goto menu
+:
