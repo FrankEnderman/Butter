@@ -774,7 +774,7 @@ del *.c
 pause
 goto menu
 :java
-echo suspicious JAR fi;le deleted
+echo suspicious JAR file deleted
 del *.jar
 pause
 goto menu
