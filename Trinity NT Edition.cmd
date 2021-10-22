@@ -422,7 +422,7 @@ echo fixing...
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.%date%.%CrashReason%.%ver%.%random%.%time% >> Record.TLF
+	echo .crash.%date%.%CrashReason%.%ver%.%~DPN-0.%time% >> Record.TLF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -480,7 +480,8 @@ timeout /T 1 /NOBREAK >nul
 echo copying registers.....
 echo .NameOfKernel(%~dpn0 ).%time% >> Record.TLF
 timeout /T 1 /NOBREAK >nul
-echo expanding registers.....
+echo downloading...
+echo .FirstBoot > Logs.TLF
 echo .NewUser:True.Setup >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
@@ -788,3 +789,4 @@ set /p IPInput= IP:
 ping %IPInput%
 pause
 goto menu
+:
