@@ -10,3 +10,6 @@ the modern versions are not compatible with DOS and will not run on windows 8, 7
 ## Get Support
 if you find a bug, Please report it in the issues tab. 
 if you want a feature, you can either send it to my email OR use issues.
+## canary
+if you download canary, you may find some errors because I just finished making them. 
+your feedback will be listened more closely.
