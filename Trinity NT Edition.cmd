@@ -138,7 +138,7 @@ echo 2.Useful tools menu
 echo 3.Dates menu 
 echo 4.Change text color to green 
 echo 5.Shutdown
-echo 6.Ping
+echo 6.Troubleshoot Internet Connection
 echo 7.Exit
 echo 8.Antivirus
 echo 9.calculator
