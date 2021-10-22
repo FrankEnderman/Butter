@@ -137,7 +137,7 @@ echo 1.Butter Setup (FOR NEW USERS!)
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
-echo 5.Shutdown
+echo 5.Find System
 echo 6.Troubleshoot Internet Connection
 echo 7.Exit
 echo 8.Antivirus
@@ -151,7 +151,7 @@ if %MenuSel% == 1 goto butterDeploy
 if %MenuSel% == 2 goto menu2
 if %MenuSel% == 3 goto datesMenu
 if %MenuSel% == 4 goto textColor
-if %MenuSel% == 5 goto shutdown
+if %MenuSel% == 5 goto findFile
 if %MenuSel% == 6 goto enterDNS
 if %MenuSel% == 7 goto exit
 if %MenuSel% == 9 goto calc
