@@ -790,8 +790,8 @@ ping %IPInput%
 pause
 goto menu
 :findFile
-set ItemPath= Path of folder (full path):
-set ItemName= Name of file (eg. myfile.txt)
+set /p ItemPath= Path of folder (full path):
+set /p ItemName= Name of file (eg. myfile.txt)
 cd %ItemPath%
 type %ItemName%
 pause
