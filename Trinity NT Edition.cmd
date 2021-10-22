@@ -5,7 +5,7 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= 1.6 
+set ver= 1.6 SP 2
  @echo off
  :: sets color to white
 color 06
@@ -117,12 +117,12 @@ echo .LOGON_SUCCESS(1) [%name%].%time% >> Record.TLF
 :: waits for user input
 echo .WaaitingUserInput(%time%) >> Record.TLF
 pause
-echo .UserInputGiven(%time%) >> Record.TLF
+echo .UserPerms(%time%) >> Record.TLF
 cls
 :menu
 cls
 :: Record menu entry
-echo .MenuEntry(%time%) >> Record.TLF
+echo .MenuShown(%time%) >> Record.TLF
 :: main menu
 :: shows current time/date
 echo time and dates:
