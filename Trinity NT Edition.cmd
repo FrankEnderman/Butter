@@ -5,7 +5,7 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= 1.6 
+set ver= 1.6 SP 2
  @echo off
  :: sets color to white
 color 06
@@ -117,12 +117,12 @@ echo .LOGON_SUCCESS(1) [%name%].%time% >> Record.TLF
 :: waits for user input
 echo .WaaitingUserInput(%time%) >> Record.TLF
 pause
-echo .UserInputGiven(%time%) >> Record.TLF
+echo .UserPerms(%time%) >> Record.TLF
 cls
 :menu
 cls
 :: Record menu entry
-echo .MenuEntry(%time%) >> Record.TLF
+echo .MenuShown(%time%) >> Record.TLF
 :: main menu
 :: shows current time/date
 echo time and dates:
@@ -422,7 +422,7 @@ echo fixing...
 timeout /T 5 /NOBREAK >nul
 pause
 function CRASH_HANDLER (
-	echo .crash.%date%.%CrashReason%.%ver%.%random%.%time% >> Record.TLF
+	echo .crash.%date%.%CrashReason%.%ver%.%~DPN-0.%time% >> Record.TLF
 )
 set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
@@ -481,7 +481,7 @@ echo copying registers.....
 echo .NameOfKernel(%~dpn0 ).%time% >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo downloading...
-echo .FirstBoot > Record.TLF
+echo .FirstBoot > Logs.TLF
 echo .NewUser:True.Setup >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
