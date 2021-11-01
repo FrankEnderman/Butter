@@ -1,3 +1,37 @@
+::[Bat To Exe Converter]
+::
+::YAwzoRdxOk+EWAjk
+::fBw5plQjdCyDJGyX8VAjFB9GXgWIAE+1EbsQ5+n//Napl2Y4Gus8d+8=
+::YAwzuBVtJxjWCl3EqQJgSA==
+::ZR4luwNxJguZRRnk
+::Yhs/ulQjdF+5
+::cxAkpRVqdFKZSDk=
+::cBs/ulQjdF+5
+::ZR41oxFsdFKZSDk=
+::eBoioBt6dFKZSDk=
+::cRo6pxp7LAbNWATEpCI=
+::egkzugNsPRvcWATEpCI=
+::dAsiuh18IRvcCxnZtBJQ
+::cRYluBh/LU+EWAnk
+::YxY4rhs+aU+IeA==
+::cxY6rQJ7JhzQF1fEqQJhZks0
+::ZQ05rAF9IBncCkqN+0xwdVs0
+::ZQ05rAF9IAHYFVzEqQJQ
+::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
+::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
+::cRolqwZ3JBvQF1fEqQIeBy8UbUS0FVmPNfRc3NrO3N7Hj2hdDsZf
+::dhA7uBVwLU+EWDk=
+::YQ03rBFzNR3SWATElA==
+::dhAmsQZ3MwfNWATElA==
+::ZQ0/vhVqMQ3MEVWAtB9wMR5ELA==
+::Zg8zqx1/OA3MEVWAtB9wSA==
+::dhA7pRFwIByZRRnk
+::Zh4grVQjdDeDJFiU5FEMGzp2aTa+DHm1DLAf/KjP/eOJq1kEaMEwdZ/S1rGKYMYc+EjlYYUR9Ul+yZlCCQNdHg==
+::YB416Ek+ZG8=
+::
+::
+::978f952a14a936cc963da21a135fa983
+
 :: © Interstar Corp. 
 :: all changes made must include this license.
 :: This software is licensed under GPL 3.0.
@@ -72,6 +106,7 @@ echo .UserPerms(%time%) >> Record.TLF
 cls
 :menu
 cls
+color 08
 :: Record menu entry
 echo .MenuShown(%time%) >> Record.TLF
 :: main menu
