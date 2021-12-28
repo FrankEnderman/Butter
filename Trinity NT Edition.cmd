@@ -6,18 +6,39 @@
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= Trilon 1 B2077
+set ver= Release 21.10 Preview
  @echo off
  :: sets color to white
-color 06
+color 17
 :: sets title
 title Butter SUT %ver%
-:: adds boot info to Record.TLF file
-echo .Boot.%random%.%time%(%date%) {version: %ver%} >> Record.TLF
-:boot
-:: clears messages on boot
+:: adds startup info to Record.TLF
+echo .startup.%random%.%time%(%date%) {version: %ver%} >> Record.TLF
+:startup
+:: clears messages on startup
 cls
-:: just some boot animation
+:: PC Info
+echo Time: %time%
+timeout /T 1 /NOBREAK >nul
+echo PC Name: %username%
+:: Pre Startup Inspection (PSI)
+timeout /T 1 /NOBREAK >nul
+if exist Record.TLF echo [ OK ] LOGGING
+timeout /T 1 /NOBREAK >nul
+echo [ OK ] USER SESSION
+timeout /T 1 /NOBREAK >nul
+echo [ OK ] REGISTER FILES
+timeout /T 1 /NOBREAK >nul
+echo [ OK ] VER: %ver%
+timeout /T 1 /NOBREAK >nul
+if exist Record.TLF echo [ OK ] LOG FILE
+timeout /T 1 /NOBREAK >nul
+if exist CRASH-%name%.DUMP echo [ TRUE ] CRASH DUMP
+timeout /T 1 /NOBREAK >nul
+if not exist Record.TLF echo [ ERROR ] LOGGING
+timeout /T 1 /NOBREAK >nul
+:: just some startup animation
+color 06
 echo                             ^})=-`                        
 echo                             =GMWa}.                       
 echo                             'yqWqm:                       
@@ -46,16 +67,18 @@ echo     .ryXojXjzjoojjjooXzwkoojoooXojowkooooojjjjjkzoXooju~`
 echo        `!xwoozzjoooooooXzkooooooooozwXoooXooXjzzIXoXVr_   
 echo           .=vVoozjjoooooXkkXoooojjjkzXooXXXojjjjzTr:`     
  echo             `_~)iVzXooXojkjoooojjjkoooojzjkux*!-`        
- echo                  `.:=^r\xxL}TlulT}L]x?*~:_'              
+ echo                  `.:=^r\xxL}TlulT}L]x?*~:_'   
+
+:: cd C:\users\%username%\ 
 timeout /T 2 /NOBREAK >nul
 echo finding kernel.......
 timeout /T 1 /NOBREAK >nul
-echo Booting Butter SUT ... 
+echo starting Butter SUT ... 
 timeout /T 1 /NOBREAK >nul
 echo Loading.........
 timeout /T 1 /NOBREAK >nul
-:: Record boot complete event
-echo .BootComplete(%time%) >> Record.TLF
+:: Record startup complete event
+echo .startupComplete(%time%) >> Record.TLF
 :: login (no password inc.)
 echo enter your account name
 cls 
@@ -65,9 +88,9 @@ echo.
 echo.
 echo Welcome %name% it is %time% %date%
 echo.
-echo .LOGON_SUCCESS(1) [%name%].%time%.%ver% >> Record.TLF
+echo .LOGON_SUCCESS(1) [%name%].%time% >> Record.TLF
 :: waits for user input
-echo .WaaitingUserInput(%time%) >> Record.TLF
+echo .WaitingUserInput(%time%) >> Record.TLF
 pause
 echo .UserPerms(%time%) >> Record.TLF
 cls
@@ -78,7 +101,8 @@ color 08
 echo .MenuShown(%time%) >> Record.TLF
 :: main menu
 :: shows current time/date
-echo time and dates:
+echo %ver%
+echo.
 ECHO current time: %time%
 echo date: %date%
 echo username: %name% 
@@ -86,7 +110,7 @@ echo.
 echo Type the number for a process
 echo.
 :: shows options
-echo 1.Butter Setup (FOR NEW USERS!) 
+echo 1.File Registration (FOR NEW USERS!) 
 echo 2.Useful tools menu 
 echo 3.Dates menu 
 echo 4.Change text color to green 
@@ -143,7 +167,7 @@ pause
 goto menu
 :calc
 cls
-title Calculator- butter SUT
+title Calculator- Butter SUT %ver%
 ECHO Calculator Version 1.8
 echo.
 ECHO * = Multiply
@@ -183,13 +207,13 @@ echo .EnteredPowerOptions >> Record.TLF
 :: power options
 echo What Would You Like To Do? Type the number
 echo.
-echo 1.Reboot
+echo 1.Restart
 echo 2.Exit
 echo 3.Return to menu 
 echo 4.Shutdown PC
 :: number inputs
 set /p PowerSel=
-if %PowerSel% == 1 goto boot
+if %PowerSel% == 1 goto startup
 if %PowerSel% == 2 exit
 if %PowerSel% == 3 goto menu
 if %PowerSel% == 4 shutdown /s
@@ -381,7 +405,7 @@ set %CrashReason% == "ManuallyInitiatedCrash"
 CRASH_HANDLER
 echo since your computer crashed, we would restart it. Please NEVER mess stuff up
 timeout /T 1 /NOBREAK >nul
-goto boot
+goto startup
 :textColor
 :: set the text color
 cls
@@ -434,7 +458,7 @@ echo copying registers.....
 echo .NameOfKernel(%~dpn0 ).%time% >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo downloading...
-echo .FirstBoot > Logs.TLF
+echo .Firststartup > Logs.TLF
 echo .NewUser:True.Setup >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo completing setup.....
@@ -459,6 +483,7 @@ echo ......O................
 timeout /T 1 /NOBREAK >nul
 echo .......O...............
 timeout /T 1 /NOBREAK >nul
+echo %name% NEWUSER (%date%,%time%.%username%)
 echo ........O..............
 timeout /T 1 /NOBREAK >nul
 echo .........O..............
@@ -488,14 +513,16 @@ timeout /T 1 /NOBREAK >nul
 echo .....................O..
 timeout /T 1 /NOBREAK >nul
 echo ......................O.
+echo download.finish.%ver%(%name%, %username%) >> Record.TLF
 timeout /T 1 /NOBREAK >nul
 echo .......................O
 timeout /T 1 /NOBREAK >nul
 echo ........................
 echo .SetupComplete(NewUser: false USERNAME: %name% PCName: %username% VER: %ver%) >> Record.TLF
 echo successfully downloaded Butter %ver%! :D
+echo just dont download this illegally -_-
 pause
-goto boot 
+goto stopcode
 
 :giveFeedback
 cls
@@ -645,8 +672,6 @@ cd C:\
  if exist Alureon.EF goto Alureon.EF
  if exist Stasky.A goto Stasky.A
  if exist pushbot.tc goto pushbot.TC
- if exist *.cpp goto cpp
- if exist *.c goto c
  if exist *.jar goto java
  if exist *.f goto f
  IF EXIST WinCustomize.exe goto WinCustomize
@@ -716,16 +741,7 @@ echo removing Oneeva.A!ml virus...
 del Oneeva.A!ml.lnk
 pause
 goto menu
-:cpp
-echo suspicious C++ project deleted
-del *.cpp
-pause
-goto menu
-:c
-echo suspicious C# project deleted
-del *.c
-pause
-goto menu
+
 :java
 echo suspicious JAR file deleted
 del *.jar
@@ -737,7 +753,7 @@ del *.f
 pause
 goto menu
 :enterDNS
-echo enter IP of your failing website
+echo enter domain of your failing website
 set /p IPInput= IP:
 ping %IPInput%
 pause
@@ -747,5 +763,21 @@ set /p ItemPath= Path of folder (full path):
 set /p ItemName= Name of file (eg. myfile.txt)
 cd %ItemPath%
 type %ItemName%
+pause
+goto menu
+:stopcode
+cls
+color 17
+echo ERROR: Installation Failed (bug fix coming!)
+echo.
+echo The files failed to register.
+echo please click SPACE to return to GUI
+echo SysCrash(InstallFailed, %ver%) >> Record.TLF
+echo CRASHINFO: %date%,%time%.%ver% (%username% / %name%) >> CRASH-%name%.DUMP
+echo REASON: Installation Crashed >> CRASH-%name%.DUMP
+
+echo Check for updates: https://github.com/FrankEnderman/butter or check with the developer. 
+set name == "ROOTUSER"
+
 pause
 goto menu
