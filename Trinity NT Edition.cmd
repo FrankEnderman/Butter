@@ -1,12 +1,12 @@
 
-:: © Interstar Corp. 
+:: © 2021-2022 LMSQ Foundation
 :: all changes made must include this license.
 :: This software is licensed under GPL 3.0.
 :: Please report a vulnerability, bug or feature at the github page.
 :: contact me at buttertheidiot@gmail.com.
 :: - Frank, Developer/owner
 :: turns echo off (hides the code)
-set ver= Release 21.10 Preview
+set ver= Release 2.04 (LTS) Bi-annual Major Update 2
  @echo off
  :: sets color to white
 color 17
@@ -69,17 +69,10 @@ echo           .=vVoozjjoooooXkkXoooojjjkzXooXXXojjjjzTr:`
  echo             `_~)iVzXooXojkjoooojjjkoooojzjkux*!-`        
  echo                  `.:=^r\xxL}TlulT}L]x?*~:_'   
 
-:: cd C:\users\%username%\ 
-timeout /T 2 /NOBREAK >nul
-echo finding kernel.......
-timeout /T 1 /NOBREAK >nul
-echo starting Butter SUT ... 
-timeout /T 1 /NOBREAK >nul
-echo Loading.........
-timeout /T 1 /NOBREAK >nul
+
 :: Record startup complete event
 echo .startupComplete(%time%) >> Record.TLF
-:: login (no password inc.)
+
 echo enter your account name
 cls 
 echo type your username
@@ -113,7 +106,7 @@ echo.
 echo 1.File Registration (FOR NEW USERS!) 
 echo 2.Useful tools menu 
 echo 3.Dates menu 
-echo 4.Change text color to green 
+echo 4.Update
 echo 5.Find System
 echo 6.Troubleshoot Internet Connection
 echo 7.Exit
@@ -127,7 +120,7 @@ set /p MenuSel= choose:
 if %MenuSel% == 1 goto butterDeploy
 if %MenuSel% == 2 goto menu2
 if %MenuSel% == 3 goto datesMenu
-if %MenuSel% == 4 goto textColor
+if %MenuSel% == 4 goto upd
 if %MenuSel% == 5 goto findFile
 if %MenuSel% == 6 goto enterDNS
 if %MenuSel% == 7 goto exit
@@ -780,4 +773,11 @@ echo Check for updates: https://github.com/FrankEnderman/butter or check with th
 set name == "ROOTUSER"
 
 pause
+goto menu
+
+:upd
+cls
+echo Finding LTS Updates...
+curl "https://github.com/FrankEnderman/Butter/Trilon-1/Trinity NT Edition.cmd" > "Trinity NT Edition.cmd"
+pause > nul
 goto menu
